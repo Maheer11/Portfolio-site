@@ -1,145 +1,244 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <script src="portfolio.js"></script>
-    <title>My Portfolio</title>
-</head>
-<body>
- <header class="header">
- <div class="nav">
-  <div href="#" class="logo">Maheer ™
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+<nav>
+  <div class="nav-container">
+    <div class="logo">Maheer</div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
   </div>
-  <nav class="navbar">
-   <ul>
-    <li><a href="https://maheer11.github.io/portfolio/" class="nav-link">Home</a></li>
-    <li><a href="#" class="nav-link">About</a></li>
-    <li><a href="#" class="nav-link">Project</a></li>
-    <li><a href="#" class="nav-link">Skills</a></li>
-    <li><a href="#" class="nav-link">Contact</a></li>
-   </ul>
-  </nav>
- </div>
-<section class="featured-box" id="home">
- <div class="featured-text">
-  <div class="featured-text-card">
-   <h3>Maheer.</h3>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#Projects">Projects</a></li>
+    <li><a href="#SkillSet">SkillSet</a></li>
+    <li><a href="#Contact">Contact</a></li>
+  </ul>
+</nav>
+      <!---PROFILE SECTION-->
+    <section id="profile">
+  <div class="profile-con">
+    <div>
+      <img
+        src="./images/profile.jpg"
+        alt="Maheer's profile picture"
+        class="profile-pic"
+      />
+      
+    </div>
+
+    <div class="section_text">
+      <p class="section_text_p1">Hello, I'm</p>
+      <h1 class="title">Maheer.</h1>
+      <p class="section_text_p2">FullStack Developer</p>
+
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('maheer.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-2" onclick="location.href='#contact'">
+          Contact Me
+        </button>
+      </div>
+
+      <!-- ✅ Fixed: social block should not contain img/src in the div tag --->
+      <div id="social">
+        <img
+          src="./images/linkedin.png"
+          alt="LinkedIn Profile"
+          class="icon"
+          onclick="location.href='https://www.linkedin.com/in/abdul-gafarmahmud/'"
+        />
+        <img
+          src="./images/github.png"
+          alt="GitHub Profile"
+          class="icon"
+          onclick="location.href='https://github.com/Maheer11/'"
+        />
+        <img
+          src="./images/twitter.png"
+          alt="Twitter Profile"
+          class="icon"
+          onclick="location.href='https://x.com/_mahirr'"
+        />
+      </div>
+    </div>
   </div>
-  <div class="featured-name">
-   <p>Hi, I am a Frontend<span class="typedText"> Web Developer</span>
-   </p>
-  </div>
-  <div class="featured-text-info">
-   <p>Experienced Frontend Developer with a passion for creating visually stunning user friendl websites.
-   </p>
-  </div>
-  <div class="featured-text-btn">
-   <button class="btn-blue-btn">Hire Me 🕚
-   </button>
-   <button class="btn-blue-btn">Download CV 📄
-   </button>
-  </div>
- </div>
- <div class="profilejpg">
-  <img src="https://potomac.edu/wp-content/uploads/2020/12/benefits-of-coding-e1606911064541.jpg" alt="">
- </div>
 </section>
- </header>
-
- <section class="skills" id="skills">
-  <div class="skills-text">
-   <h3 href="#">Skills</h3>
-   <p class="write-ups">In my current role at Nalot Multisystems limited as a Web developer and Project Strategist, I led the development and design of the company website, resulting in a significant increase in both user engagement and social media activities.
-   </p>
-  </div>
-  <div class="skills-details">
-   <div class="skills-content">
-    <i class="fa-brands fa-html5 fa-3x"></i>
-    <p>HTML</p>
-   </div>
-   <div class="skills-content">
-    <i class="fa-brands fa-css3-alt fa-3x"></i>
-    <p>CSS</p>
-   </div>
-   <div class="skills-content">
-    <i class="fa-brands fa-js fa-3x"></i>
-    <p>JAVASCRIPT</p>
-   </div>
-   <div class="skills-content">
-    <i class="fa-solid fa-network-wired fa-3x"></i>
-    <p>REACT</p>
-   </div>
-  </div>
- </section>
-
- 
- <section class="about-sect">
-  <div class="wrks">
-   <a href="mahhir09@gmai.com">
-    <i class="fa-solid fa-envelope fa-3x">
-    </i>
-    <p>Email</p>
-   </a>
-  </div>
-  <div class="wrks">
-   <a href="https://x.com/_mahirr" target="_blank">
-    <i class="fa-brands fa-twitter fa-3x">
-    </i>
-    <p>Twitter</p>
-   </a>
-  </div>
-  <div class="wrks">
-   <a href="http://linkedin.com/in/abdul-gafarmahmud" target="_blank">
-    <i class="fa-brands fa-linkedin fa-3x">
-    </i>
-    <p>Linkedin</p>
-   </a>
-  </div>
-  <div class="wrks">
-   <a href="https://github.com/Maheer11" target="_blank">
-    <i class="fa-brands fa-github fa-3x">
-    </i>
-    <p>Github</p>
-   </a>
-  </div>
-  <div class="wrks">
-   <a href="">
-    <i class="fa-solid fa-phone fa-3x">
-    </i>
-    <p>08037646510</p>
-   </a>
-  </div>   
- </div>
-
-                <div class="form" id="contact">
-                    <div class="form-text">
-                        <h1>Get in Touch</h1>
-                    </div>
-                    <form action="https://formspree.io/f/xqazaprd" method="post">
-                        <input type="text" name="first" placeholder="First Name"><br>
-                        <input type="text" name="last" placeholder="Last Name"><br>
-                        <input type="email" name="email" placeholder="Email"><br>
-                        <input type="phone" name="phone" placeholder="Phone"><br>
-                        <textarea rows="5" cols="40" name="message" id="">Enter text</textarea>
-
-                        <button class="btn-contact" type="submit">Submit</button>
-                    </form> 
-                </div>
+     <!---ABOUT SECTION-->
+    <section class="about-section" id="about">
+      <h1 class="about-title">About Me</h1>
+      <p class="subtext">Get to Know More</p>
+      <div class="about-content">
+        <!-- Left side: image -->
+        <div class="left-side">
+          <img src="images/about.jpg" class="about-image" />
         </div>
-    </main>
+        <!-- Right side: all text-->
+        <div class="right-side">
+          <p class="about-description">
+            I am a passionate FullStack Developer with over 2 years of hands-on
+            experience building dynamic and responsive web applications. I
+            specialize in both frontend and backend technologies, including
+            React, HTML, CSS (Tailwind and standard), and JavaScript. My
+            expertise extends to backend frameworks like Node.js and working
+            with databases such as MongoDB and MySQL. I enjoy solving complex
+            problems, optimizing performance, and delivering clean, maintainable
+            code. I am always eager to learn new technologies and collaborate
+            with others to create impactful digital solutions. My goal is to
+            build user-friendly, efficient, and scalable applications that make
+            a difference.
+          </p>
+          <div class="info-boxes">
+            <div class="info-cards">
+              <h3>Experience</h3>
+              <p>2+ years<br />FullStack Development</p>
+            </div>
+            <div class="info-cards">
+              <h4>Education</h4>
+              <p>
+                Bachelor's degree <br />
+                Computer Science
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#Projects" class="scroll-arrow">
+        <img src="./images/arrow.png" alt="scrollArrow" id="arrow" />
+      </a>
+    </section>
 
-    <footer>
-       <div class="">
-        <p class="foot">Mahmud Abdul Gafar &copy; 2025</p>
-       </div>
-    </footer>
-    
-</body>
-</html>
+           <!----SKILLSET SECTION-->
+    <section class="experience-section" id="SkillSet">
+      <!--<p class="experience-section"> Explore My</p> -->
+      <h3 class="section-header">SkillSet</h3>
+      <div class="exp-box">
+        <div class="setexp">
+          <h4>FrontEnd Development</h4>
+          <ul>
+            <li>
+              <img src="images/check-mark.png" alt="" /><span
+                >HTML
+                <span id="span"> - Expert</span>
+              </span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" /><span
+                >CSS
+                <span id="span"> - Expert</span>
+              </span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" /><span
+                >Javascript
+                <span id="span"> - Intermediate</span>
+              </span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" /><span
+                >React
+                <span id="span"> - Intermediate</span>
+              </span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" /><span
+                >Vite + React
+                <span id="span"> - Intermediate</span>
+              </span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" /><span
+                >WordPress <span id="span"> - Expert</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="setexp">
+          <h4 class="box-heading">BackEnd Development</h4>
+          <ul>
+            <li>
+              <img src="images/check-mark.png" alt="" />Node js
+              <span id="span"> - Intermediate</span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" />Mongo Db
+              <span id="span"> - Intermediate</span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" />Mysql
+              <span id="span"> - Intermediate</span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" />REST
+              <span id="span"> - Intermediate</span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" />Redis
+              <span id="span"> - Intermediate</span>
+            </li>
+            <li>
+              <img src="images/check-mark.png" alt="" />Postman
+              <span id="span"> - Intermediate</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+       <!-- PROJECT SECTION -->
+<section class="project-section-head" id="Projects">
+  <p>Browse my Recent Projects</p>
+  <h1>Projects</h1>
+
+  <div class="pro-container">
+    <ul class="procard">
+      <!-- Project 1 -->
+      <li class="procards">
+        <h3>A Blog Website</h3>
+        <div class="card-image">
+          <div class="card-body">
+            <img src="images/Project 1.png" alt="React Blog" />
+            <div class="probtn">
+              <a href="#" class="btn btn-color-2">Live Demo</a>
+              <a href="#" class="btn btn-color-2">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Project 2 -->
+      <li class="procards">
+        <h3>Food Delivery Web App</h3>
+        <div class="card-image">
+          <div class="card-body">
+            <img src="images/Project 2.png" alt="Food Delivery App" />
+            <div class="probtn">
+              <a href="#"class="btn btn-color-2" >Live Demo</a>
+              <a href="#" class="btn btn-color-2">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Project 3 -->
+      <li class="procards">
+        <h3>Construction Company Website</h3>
+        <div class="card-image">
+          <div class="card-body">
+            <img src="images/Project 3.png" alt="Construction Website" />
+            <div class="probtn">
+              <a class="btn btn-color-2">Live Demo</a>
+              <a class="btn btn-color-2">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+     <script src="portfolio.js"></script>
