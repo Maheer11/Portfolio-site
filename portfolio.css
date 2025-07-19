@@ -338,12 +338,19 @@ experience-section {
   flex-direction: column;
   align-items: center;
   padding: 4rem;
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 
 .procards:hover {
   transform: translateY(-5px);
 }
+.procards.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Image wrapper */
 
