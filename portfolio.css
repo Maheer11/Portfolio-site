@@ -25,6 +25,171 @@ html{
 p{
     color: rgb(85, 85, 85);
 }
+
+/* Dark Mode */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #161614;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  color: #ffffff;
+}
+
+.darkmode {
+  background-color: #1a0d1a;
+  color: #ffffff;
+}
+.darkmode p {
+  color: #b0b0b0;
+}
+
+.darkmode nav {
+  background-color: #1a0d1a;
+  color: #ffffff;
+}
+
+.darkmode .nav-links li a {
+  color: #ffffff;
+}
+
+.darkmode .nav-links li a:hover {
+  background-color: #3d0140;
+  color: #f1edf2;
+}
+.darkmode .btn {
+  background-color: rgba(85, 60, 150, 0.5);
+  color: #ffffff;
+}
+
+.darkmode .btn:hover {
+  background-color: #310631;
+  color: #fff;
+}
+.darkmode .about-section {
+  background: #1a0d1a;
+}
+.darkmode .about-title,
+.darkmode .subtext {
+  color: #ffffff;
+}   
+
+.darkmode .info-cards {
+  background-color: #2a1a2a;
+  color: #ffffff;
+}
+.darkmode .setexp {
+  background: #2a1a2a;
+  color: #ffffff;
+}
+.darkmode .setexp:hover {
+  background-color: #be8ebe;
+  color: aliceblue;
+}
+.darkmode .project-section-head {
+  background-color: #1a0d1a;
+  color: #ffffff;
+}
+.darkmode .procards {
+  background-color: #2a1a2a;
+  color: #ffffff;
+}
+.darkmode .card-body h3 {
+  color: #ffffff;
+}
+.darkmode .probtn .btn {
+  background-color: #c6b5e4;
+  color: #ffffff;
+}
+.darkmode .probtn .btn:hover {
+  background-color: #a58bd4;
+}
+.darkmode .section_text_p1,
+.darkmode .section_text_p2 {
+  color: #ffffff;
+}
+.darkmode .title {
+  color: #ffffff;
+}
+.darkmode .logo {
+  color: #ffffff;
+}
+.darkmode .profile-pic {
+  border: 5px solid #ffffff;
+}
+.darkmode .icon {
+  filter: invert(1);
+}
+.darkmode .about-image {
+  border: 5px solid #ffffff;
+}
+
+.darkmode .btn-container .btn {
+  background-color: rgba(85, 60, 150, 0.5);
+  color: #ffffff;
+}
+.darkmode .btn-container .btn:hover {
+  background-color: #310631;
+  color: #fff;
+}
+
+.darkmode #social .icon {
+  filter: invert(1);
+}
+
+.darkmode .section-header {
+  color: #ffffff;
+}
+.darkmode .setexp h4 {
+  color: #ffffff;
+}
+.darkmode .setexp ul {
+  color: #ffffff;
+}
+.darkmode .setexp li {
+  color: #ffffff;
+}
+.darkmode .setexp img {
+  filter: invert(1);
+}
+.darkmode .project-section-head p {
+  color: #b0b0b0;
+}
+.darkmode .project-section-head h1 {
+  color: #ffffff;
+}
+.darkmode .pro-container {
+  background: #1a0d1a;
+}
+.darkmode .procards.visible {
+  background-color: white;
+  color: #2d0030;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+.darkmode .card-body h3 {
+  color: #ffffff;
+}
+.darkmode .probtn .btn {
+  background-color: #c6b5e4;
+  color: #ffffff;
+}
+.darkmode .probtn .btn:hover {
+  background-color: #a58bd4;
+}
+.darkmode .hamburger {
+  color: #ffffff;
+}
+.darkmode .hamburger:hover {
+  color: #f1edf2;
+}
+
 /*NAVIGATION BAR*/
 nav {
   color: rgb(35, 13, 35);

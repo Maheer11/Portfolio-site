@@ -17,3 +17,15 @@ const observer = new IntersectionObserver(entries => {
   document.querySelectorAll('.procards').forEach(card => {
     observer.observe(card);
   });
+
+  const toggleButton = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  toggleButton.addEventListener('click', () => {
+    body.classList.toggle('darkmode');
+    if (body.classList.contains('darkmode')) {
+      toggleButton.textContent = 'Light Mode';
+    } else {
+      toggleButton.textContent = 'Dark Mode';
+    }
+  }); 
