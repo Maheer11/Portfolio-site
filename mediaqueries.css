@@ -21,8 +21,11 @@
     display: flex;
   }
 
-  .hamburger {
-    display: block;
+
+  .darkmode .hamburger {
+    display: subgrid;
+    color: #3a082b;
+    background-color: inherit;
   }
 
   /* Profile section image smaller */

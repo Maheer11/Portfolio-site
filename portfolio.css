@@ -68,6 +68,8 @@ p{
   background-color: rgba(168, 7, 122, 0.626);
   color: whitesmoke;
   border-color: whitesmoke;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: none;
 }
 .darkmode.about-image{
   border-color: 5px solid #40032c;
@@ -75,6 +77,7 @@ p{
 .darkmode .btn:hover {
   background-color: #310631;
   color: #fff;
+  letter-spacing: 0.25em;
 }
 .darkmode .about-section {
   background: #1a0d1a;
@@ -188,12 +191,6 @@ p{
 .darkmode .probtn .btn:hover {
   background-color: #a58bd4;
 }
-.darkmode .hamburger {
-  color: #ffffff;
-}
-.darkmode .hamburger:hover {
-  color: #f1edf2;
-}
 
 /*NAVIGATION BAR*/
 nav {
@@ -296,7 +293,7 @@ nav {
 .btn-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
   margin-top: 1rem;
 }
 
@@ -310,6 +307,7 @@ nav {
   font-weight: 450;
   cursor: pointer;
   color:rgb(53, 2, 53);
+ 
 }
 
 .btn:active{
@@ -317,9 +315,10 @@ transform: scale(0.96);
 }
 
 .btn:hover {
-  background-color: #520547;
+  background: var(--primary-color, #5a0841);
   color: white;
   transition: background-color 0.4s ease-in-out;
+  letter-spacing: 0.23em;
 }
 
 
