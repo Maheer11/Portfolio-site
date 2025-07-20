@@ -32,13 +32,14 @@ p{
   top: 1rem;
   right: 1rem;
   padding: 0.5rem 1rem;
-  background: #161614;
-  border: none;
+  background: white;
   cursor: pointer;
+  border-color: rgb(49, 3, 31);
   border-radius: 0.4rem;
   font-size: 1rem;
+  font-weight: 400;
   transition: background-color 0.3s, color 0.3s;
-  color: #ffffff;
+  color:black
 }
 
 .darkmode {
@@ -61,12 +62,16 @@ p{
 .darkmode .nav-links li a:hover {
   background-color: #3d0140;
   color: #f1edf2;
+  border-color: #2d0030;
 }
 .darkmode .btn {
-  background-color: rgba(85, 60, 150, 0.5);
-  color: #ffffff;
+  background-color: rgba(168, 7, 122, 0.626);
+  color: whitesmoke;
+  border-color: whitesmoke;
 }
-
+.darkmode.about-image{
+  border-color: 5px solid #40032c;
+}
 .darkmode .btn:hover {
   background-color: #310631;
   color: #fff;
@@ -120,7 +125,7 @@ p{
   color: #ffffff;
 }
 .darkmode .profile-pic {
-  border: 5px solid #ffffff;
+  border: 5px solid #4e0337;
 }
 .darkmode .icon {
   filter: invert(1);
@@ -223,7 +228,6 @@ nav {
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
-  
   transition: background-color 0.3s, color 0.3s;
   
 }
@@ -296,24 +300,29 @@ nav {
   margin-top: 1rem;
 }
 
-
-  .btn {
-  padding: 1rem;
+.btn{
+  position: relative;
+  padding: 15px 20px;
+  background:white;
   border-radius: 1rem;
-  font-weight: 550;
-  font-size: 14px;
-  border: none;
-  background-color:  rgba(85, 60, 150, 0.3);
-  color: #300a30;
+  font-size: 15px;
+  border-color: #630e51;
+  font-weight: 450;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-align: center;
+  color:rgb(53, 2, 53);
+}
+
+.btn:active{
+transform: scale(0.96);
 }
 
 .btn:hover {
-  background-color: #310631;
-  color: #fff;
+  background-color: #520547;
+  color: white;
+  transition: background-color 0.4s ease-in-out;
 }
+
+
 
 #social {
   display: flex;
@@ -574,3 +583,28 @@ experience-section {
 .probtn .btn:hover {
   background-color: #a58bd4;
 }
+
+#filter-buttons {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  
+}
+
+#filter-buttons button {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s ease;
+   font-size: 17;
+  font-weight: 300;
+}
+
+#filter-buttons button:hover,
+#filter-buttons button.active {
+  background: #6a0dad;
+  color: white;
+}
+

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="portfolio.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
-  <body class="darkmode">
+  <body class="lightmode">
 <nav>
   <div class="nav-container">
     <div class="logo">Maheer</div>
@@ -39,14 +39,14 @@
       <h1 class="title">Maheer.</h1>
       <p class="section_text_p2">FullStack Developer</p>
 
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('maheer.pdf')"> 
-  Download CV
+      <div>
+        <button class="btn" onclick="window.open('maheer.pdf')"> 
+  Resume
 </button>
 
 
         </button>
-        <button class="btn btn-color-2" onclick="location.href='#contact'">
+        <button class="btn" onclick="location.href='#contact'">
           Contact Me
         </button>
       </div>
@@ -199,11 +199,17 @@
 <section class="project-section-head" id="Projects">
   <p>Browse my Recent Projects</p>
   <h1>Projects</h1>
+  <div id="filter-buttons">
+  <button data-filter="all">All</button>
+  <button data-filter="React">React</button>
+  <button data-filter="Node.js">Node.js</button>
+  <button data-filter="WordPress">WordPress</button>
+</div>
 
   <div class="pro-container">
     <ul class="procard">
       <!-- Project 1 -->
-      <li class="procards">
+      <li class="procards" data-tech="React">
         <h3>A Blog Website</h3>
         <div class="card-image">
           <div class="card-body">
@@ -217,7 +223,7 @@
       </li>
 
       <!-- Project 2 -->
-      <li class="procards">
+      <li class="procards" data-tech="React, Node.js">
         <h3>Food Delivery Web App</h3>
         <div class="card-image">
           <div class="card-body">
@@ -231,7 +237,7 @@
       </li>
 
       <!-- Project 3 -->
-      <li class="procards">
+      <li class="procards"  data-tech="WordPress">
         <h3>Construction Company Website</h3>
         <div class="card-image">
           <div class="card-body">
