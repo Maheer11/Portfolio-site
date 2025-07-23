@@ -5,279 +5,325 @@
     <title>My portfolio</title>
     <link rel="stylesheet" href="portfolio.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body class="lightmode">
-<nav>
-  <div class="nav-container">
-    <div class="logo">Maheer</div>
-    <div class="hamburger" id="hamburger">&#9776;</div>
-  </div>
-  <ul class="nav-links" id="navlinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#Projects">Projects</a></li>
-    <li><a href="#SkillSet">SkillSet</a></li>
-    <li><a href="#Contact">Contact</a></li>
-  </ul>
 
-  <button id="theme-toggle"> Dark Mode</button>
-
-</nav>
-      <!---PROFILE SECTION-->
-    <section id="profile">
-  <div class="profile-con">
-    <div>
-      <img
-        src="./images/profile.jpg"
-        alt="Maheer's profile picture"
-        class="profile-pic"
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       />
-      
-    </div>
+      <!-- Or, use a Kit code:
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  -->
+    </head>
 
-    <div class="section_text">
-      <p class="section_text_p1">Hello, I'm</p>
-      <h1 class="title">Maheer.</h1>
-      <p class="section_text_p2">FullStack Developer</p>
-
-      <div>
-        <button class="btn" onclick="window.open('maheer.pdf')"> 
-  Resume
-</button>
-
-
-        </button>
-        <button class="btn" onclick="location.href='#contact'">
-          Contact Me
-        </button>
-      </div>
-
-      <!-- ✅ Fixed: social block should not contain img/src in the div tag --->
-      <div id="social">
-        <img
-          src="./images/linkedin.png"
-          alt="LinkedIn Profile"
-          class="icon"
-          onclick="location.href='https://www.linkedin.com/in/abdul-gafarmahmud/'"
-        />
-        <img
-          src="./images/github.png"
-          alt="GitHub Profile"
-          class="icon"
-          onclick="location.href='https://github.com/Maheer11/'"
-        />
-        <img
-          src="./images/twitter.png"
-          alt="Twitter Profile"
-          class="icon"
-          onclick="location.href='https://x.com/_mahirr'"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-     <!---ABOUT SECTION-->
-    <section class="about-section" id="about">
-      <h1 class="about-title">About Me</h1>
-      <p class="subtext">Get to Know More</p>
-      <div class="about-content">
-        <!-- Left side: image -->
-        <div class="left-side">
-          <img src="images/about.jpg" class="about-image" />
+    <body class="lightmode">
+      <nav>
+        <div class="nav-container">
+          <div class="logo">Maheer</div>
+          <button class="mode-btn" id="toggleButton">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="mode-btn-style"
+              width="2rem"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              />
+            </svg>
+          </button>
         </div>
-        <!-- Right side: all text-->
-        <div class="right-side">
-          <p class="about-description">
-            I am a passionate FullStack Developer with over 2 years of hands-on
-            experience building dynamic and responsive web applications. I
-            specialize in both frontend and backend technologies, including
-            React, HTML, CSS (Tailwind and standard), and JavaScript. My
-            expertise extends to backend frameworks like Node.js and working
-            with databases such as MongoDB and MySQL. I enjoy solving complex
-            problems, optimizing performance, and delivering clean, maintainable
-            code. I am always eager to learn new technologies and collaborate
-            with others to create impactful digital solutions. My goal is to
-            build user-friendly, efficient, and scalable applications that make
-            a difference.
-          </p>
-          <div class="info-boxes">
-            <div class="info-cards">
-              <h3>Experience</h3>
-              <p>2+ years<br />FullStack Development</p>
+        <div class=" nav-both">
+          <div class="not"></div>
+          <div class="hamburger" id="hamburger">&#9776;</div>
+          <ul class="nav-links" id="navlinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#SkillSet">SkillSet</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!---PROFILE SECTION-->
+      <section id="profile">
+        <div class="profile-con">
+          <div>
+            <img
+              src="./images/profile.jpg"
+              alt="Maheer's profile picture"
+              class="profile-pic"
+            />
+          </div>
+
+          <div class="section_text">
+            <p class="section_text_p1">Hello, I'm</p>
+            <h1 class="title">Maheer.</h1>
+            <p class="section_text_p2">FullStack Developer</p>
+
+            <div>
+              <button class="btn" onclick="window.open('maheer.pdf')">
+                Resume
+              </button>
+
+              <button class="btn" onclick="location.href='#contact'">
+                Contact Me
+              </button>
             </div>
-            <div class="info-cards">
-              <h4>Education</h4>
-              <p>
-                Bachelor's degree <br />
-                Computer Science
-              </p>
+
+            <!-- ✅ Fixed: social block should not contain img/src in the div tag --->
+            <div id="social">
+              <img
+                src="./images/linkedin.png"
+                alt="LinkedIn Profile"
+                class="icon"
+                onclick="location.href='https://www.linkedin.com/in/abdul-gafarmahmud/'"
+              />
+              <img
+                src="./images/github.png"
+                alt="GitHub Profile"
+                class="icon"
+                onclick="location.href='https://github.com/Maheer11/'"
+              />
+              <img
+                src="./images/twitter.png"
+                alt="Twitter Profile"
+                class="icon"
+                onclick="location.href='https://x.com/_mahirr'"
+              />
             </div>
           </div>
         </div>
-      </div>
-      <a href="#Projects" class="scroll-arrow">
-        <img src="./images/arrow.png" alt="scrollArrow" id="arrow" />
-      </a>
-    </section>
+      </section>
+      <!---ABOUT SECTION-->
+      <section class="about-section" id="about">
+        <h1 class="about-title">About Me</h1>
+        <p class="subtext">Get to Know More</p>
+        <div class="about-content">
+          <!-- Left side: image -->
+          <div class="left-side">
+            <img src="images/about.jpg" class="about-image" />
+          </div>
+          <!-- Right side: all text-->
+          <div class="right-side">
+            <p class="about-description">
+              I am a passionate FullStack Developer with over 2 years of
+              hands-on experience building dynamic and responsive web
+              applications. I specialize in both frontend and backend
+              technologies, including React, HTML, CSS (Tailwind and standard),
+              and JavaScript. My expertise extends to backend frameworks like
+              Node.js and working with databases such as MongoDB and MySQL. I
+              enjoy solving complex problems, optimizing performance, and
+              delivering clean, maintainable code. I am always eager to learn
+              new technologies and collaborate with others to create impactful
+              digital solutions. My goal is to build user-friendly, efficient,
+              and scalable applications that make a difference.
+            </p>
+            <div class="info-boxes">
+              <div class="info-cards">
+                <h3>Experience</h3>
+                <p>2+ years<br />FullStack Development</p>
+              </div>
+              <div class="info-cards">
+                <h4>Education</h4>
+                <p>
+                  Bachelor's degree <br />
+                  Computer Science
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#Projects" class="scroll-arrow">
+          <img src="./images/arrow.png" alt="scrollArrow" id="arrow" />
+        </a>
+      </section>
 
-           <!----SKILLSET SECTION-->
-    <section class="experience-section" id="SkillSet">
-      <!--<p class="experience-section"> Explore My</p> -->
-      <h3 class="section-header">SkillSet</h3>
-      <div class="exp-box">
-        <div class="setexp">
-          <h4>FrontEnd Development</h4>
-          <ul>
-            <li>
-              <img src="images/check-mark.png" alt="" /><span
-                >HTML
-                <span id="span"> - Expert</span>
-              </span>
-            </li>
-            <li>
-              <img src="images/check-mark.png" alt="" /><span
-                >CSS
-                <span id="span"> - Expert</span>
-              </span>
-            </li>
-            <li>
-              <img src="images/check-mark.png" alt="" /><span
-                >Javascript
+      <!----SKILLSET SECTION-->
+      <section class="experience-section" id="SkillSet">
+        <!--<p class="experience-section"> Explore My</p> -->
+        <h3 class="section-header">SkillSet</h3>
+        <div class="exp-box">
+          <div class="setexp">
+            <h4>FrontEnd Development</h4>
+            <ul>
+              <li>
+                <img src="images/check-mark.png" alt="" /><span
+                  >HTML
+                  <span id="span"> - Expert</span>
+                </span>
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" /><span
+                  >CSS
+                  <span id="span"> - Expert</span>
+                </span>
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" /><span
+                  >Javascript
+                  <span id="span"> - Intermediate</span>
+                </span>
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" /><span
+                  >React
+                  <span id="span"> - Intermediate</span>
+                </span>
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" /><span
+                  >Vite + React
+                  <span id="span"> - Intermediate</span>
+                </span>
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" /><span
+                  >WordPress <span id="span"> - Expert</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="setexp">
+            <h4 class="box-heading">BackEnd Development</h4>
+            <ul>
+              <li>
+                <img src="images/check-mark.png" alt="" />Node js
                 <span id="span"> - Intermediate</span>
-              </span>
-            </li>
-            <li>
-              <img src="images/check-mark.png" alt="" /><span
-                >React
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" />Mongo Db
                 <span id="span"> - Intermediate</span>
-              </span>
-            </li>
-            <li>
-              <img src="images/check-mark.png" alt="" /><span
-                >Vite + React
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" />Mysql
                 <span id="span"> - Intermediate</span>
-              </span>
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" />REST
+                <span id="span"> - Intermediate</span>
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" />Redis
+                <span id="span"> - Intermediate</span>
+              </li>
+              <li>
+                <img src="images/check-mark.png" alt="" />Postman
+                <span id="span"> - Intermediate</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECT SECTION -->
+      <section class="project-section-head" id="Projects">
+        <p>Browse my Recent Projects</p>
+        <h1>Projects</h1>
+        <div id="filter-buttons">
+          <button data-filter="all">All</button>
+          <button data-filter="React">React</button>
+          <button data-filter="Node.js">Node.js</button>
+          <button data-filter="WordPress">WordPress</button>
+        </div>
+
+        <div class="pro-container">
+          <ul class="procard">
+            <!-- Project 1 -->
+            <li class="procards" data-tech="React">
+              <h3>A Blog Website</h3>
+              <div class="card-image">
+                <div class="card-body">
+                  <img src="images/Project 1.png" alt="React Blog" />
+                  <div class="probtn">
+                    <a
+                      href="https://maheer11.github.io/maheers-blog/"
+                      class="btn btn-color-2"
+                      >Live Demo</a
+                    >
+                    <a
+                      class="btn btn-color-2"
+                      href="https://github.com/Maheer11/maheers-blog"
+                      >GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
             </li>
-            <li>
-              <img src="images/check-mark.png" alt="" /><span
-                >WordPress <span id="span"> - Expert</span>
-              </span>
+
+            <!-- Project 2 -->
+            <li class="procards" data-tech="React, Node.js">
+              <h3>Food Delivery Web App</h3>
+              <div class="card-image">
+                <div class="card-body">
+                  <img src="images/Project 2.png" alt="Food Delivery App" />
+                  <div class="probtn">
+                    <a
+                      href="https://maheer11.github.io/food-dev-app/ "
+                      class="btn btn-color-2"
+                      >Live Demo</a
+                    >
+                    <a href="" class="btn btn-color-2">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Project 3 -->
+            <li class="procards" data-tech="WordPress">
+              <h3>Construction Company Website</h3>
+              <div class="card-image">
+                <div class="card-body">
+                  <img src="images/Project 3.png" alt="Construction Website" />
+                  <div class="probtn">
+                    <a class="btn btn-color-2" href="nalot.com.ng">Live Demo</a>
+                    <a class="btn btn-color-2">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="procards" data-tech="React">
+              <h3>Portfolio</h3>
+              <div class="card-image">
+                <div class="card-body">
+                  <img src="images/Portfolio.png" alt="Maheers-Portfolio" />
+                  <div class="probtn">
+                    <a
+                      class="btn btn-color-2"
+                      href="https://maheer11.github.io/Portfolio-site/"
+                      >Live Demo</a
+                    >
+                    <a class="btn btn-color-2">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="procards" data-tech="Vite, React">
+              <h3>Password Validation</h3>
+              <div class="card-image">
+                <div class="card-body">
+                  <img src="images/validation.png" alt="Password Validation" />
+                  <div class="probtn">
+                    <a
+                      class="btn btn-color-2"
+                      href="https://maheer11.github.io/User-Form-Password-Validation/"
+                      >Live Demo</a
+                    >
+                    <a class="btn btn-color-2">GitHub</a>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
-        <div class="setexp">
-          <h4 class="box-heading">BackEnd Development</h4>
-          <ul>
-            <li>
-              <img src="images/check-mark.png" alt="" />Node js
-              <span id="span"> - Intermediate</span>
-            </li>
-            <li>
-              <img src="images/check-mark.png" alt="" />Mongo Db
-              <span id="span"> - Intermediate</span>
-            </li>
-            <li>
-             <img src="images/check-mark.png" alt="" />Mysql
-              <span id="span"> - Intermediate</span>
-            </li>
-            <li>
-              <img src="images/check-mark.png" alt="" />REST
-              <span id="span"> - Intermediate</span>
-            </li>
-            <li>
-              <img src="images/check-mark.png" alt="" />Redis
-              <span id="span"> - Intermediate</span>
-            </li>
-            <li>
-              <img src="images/check-mark.png" alt="" />Postman
-              <span id="span"> - Intermediate</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-       <!-- PROJECT SECTION -->
-<section class="project-section-head" id="Projects">
-  <p>Browse my Recent Projects</p>
-  <h1>Projects</h1>
-  <div id="filter-buttons">
-  <button data-filter="all">All</button>
-  <button data-filter="React">React</button>
-  <button data-filter="Node.js">Node.js</button>
-  <button data-filter="WordPress">WordPress</button>
-</div>
+      </section>
 
-  <div class="pro-container">
-    <ul class="procard">
-      <!-- Project 1 -->
-      <li class="procards" data-tech="React">
-        <h3>A Blog Website</h3>
-        <div class="card-image">
-          <div class="card-body">
-            <img src="images/Project 1.png" alt="React Blog" />
-            <div class="probtn">
-              <a href="https://maheer11.github.io/maheers-blog/" class="btn btn-color-2">Live Demo</a>
-              <a class="btn btn-color-2" href="https://github.com/Maheer11/maheers-blog">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <!-- Project 2 -->
-      <li class="procards" data-tech="React, Node.js">
-        <h3>Food Delivery Web App</h3>
-        <div class="card-image">
-          <div class="card-body">
-            <img src="images/Project 2.png" alt="Food Delivery App" />
-            <div class="probtn">
-              <a href="https://maheer11.github.io/food-dev-app/ " class="btn btn-color-2"  >Live Demo</a>
-              <a href="" class="btn btn-color-2">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <!-- Project 3 -->
-      <li class="procards"  data-tech="WordPress">
-        <h3>Construction Company Website</h3>
-        <div class="card-image">
-          <div class="card-body">
-            <img src="images/Project 3.png" alt="Construction Website" />
-            <div class="probtn">
-              <a class="btn btn-color-2" href="nalot.com.ng">Live Demo</a>
-              <a class="btn btn-color-2">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li class="procards"  data-tech="React">
-        <h3>Portfolio</h3>
-        <div class="card-image">
-          <div class="card-body">
-            <img src="images/Portfolio.png" alt="Maheers-Portfolio" />
-            <div class="probtn">
-              <a class="btn btn-color-2" href="https://maheer11.github.io/Portfolio-site/">Live Demo</a>
-              <a class="btn btn-color-2">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </li>
-   
-
-  <li class="procards"  data-tech="Vite, React">
-        <h3>Password Validation</h3>
-        <div class="card-image">
-          <div class="card-body">
-            <img src="images/validation.png" alt="Password Validation" />
-            <div class="probtn">
-              <a class="btn btn-color-2" href="https://maheer11.github.io/User-Form-Password-Validation/">Live Demo</a>
-              <a class="btn btn-color-2">GitHub</a>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-     <script src="portfolio.js"></script>
+      <script src="portfolio.js"></script>
+    </body>
+  </head>
+</html>

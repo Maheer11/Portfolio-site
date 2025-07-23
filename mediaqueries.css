@@ -2,16 +2,83 @@
    📱 MOBILE VIEW
    Max-width: 768px
 -------------------- */
+
+@media (max-width: 390px) {
+  body {
+    font-size: 14px;
+    max-width: fit-content; /* Adjust base font size for smaller screens */
+  }
+
+  .nav-links {
+    gap: 0.5rem; /* Reduce gap between nav links */
+  }
+
+  .nav-both{
+  display: flex;
+  justify-content: space-between;
+}
+  .not{
+  display: inline-block;
+  
+}
+
+  .profile-pic {
+    width: 150px; /* Smaller profile picture */
+    height: 150px;
+  }
+
+  .profile-con {
+    flex-direction: column; /* Stack profile content vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-content {
+    flex-direction: column; /* Stack about section content vertically */
+    text-align: center;
+  }
+
+  .info-boxes {
+    flex-direction: column; /* Stack info boxes vertically */
+    align-items: center;
+  }
+
+  .exp-box {
+    flex-direction: column; /* Stack experience boxes vertically */
+    align-items: center;
+  }
+
+  .procards {
+    width: 100%; /* Full width for project cards */
+    padding: 1rem; /* Reduced padding */
+  }
+
+  .procard {
+    flex-direction: column; /* Stack project cards vertically */
+    align-items: center;
+  }
+  #hamburger{
+    display: block !important; /* Show hamburger icon */
+    font-size: 2rem ; /* Larger icon for visibility */
+    cursor: pointer;
+    z-index: 1002; /* Ensure it appears above other elements */
+    color: blueviolet; /* Color for visibility */
+    /* left: 30px;
+    right: none; */
+    
+  }
+}
+
 @media screen and (max-width: 768px) {
   /* Stack nav links vertically and show hamburger */
   .nav-links {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 120px;
+    right: 40px;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -21,13 +88,38 @@
     display: flex;
   }
 
+  .nav-both{
+  display: flex;
+  justify-content: space-between;
+}
+
+  .not{
+  display: inline-block;
+  
+}
+
 
   .darkmode .hamburger {
-    display: subgrid;
-    color: #3a082b;
-    background-color: inherit;
+    display: flex;
+    color: white;
+   
+    
+  }
+  .darkmode .nav-links.active {
+    background-color: #3a082b;
+    color: white;
+    bottom: 60px;
+  }
+  
+  .darkmode {
+    bottom: 5rem;
   }
 
+
+  .darkmode .nav-links li a:hover{
+    color: #3a082b;
+    background-color: white;
+  }
   /* Profile section image smaller */
   .profile-pic {
     width: 200px;
@@ -72,12 +164,17 @@
   }
 
    .hamburger {
-    display: block;
+    position: relative;
+    display: inline-block;
     font-size: 2rem;
     cursor: pointer;
-    z-index: 1002;
+    z-index: 1002  !important;
     color: blueviolet;
+    /* right: 20px !important;
+    top: 20px !important; */
+  
   }
+ 
 }
 
 
@@ -85,9 +182,12 @@
    📱 TABLET VIEW
    Min-width: 769px and Max-width: 1024px
 -------------------- */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 900px) and (max-width: 1300px) {
   .nav-links {
     gap: 1.5rem;
+  }
+  .not{
+    display: none;
   }
 
   .profile-con {

@@ -13,8 +13,8 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    ;
-    width: 100%;
+    max-width: 90%;
+    margin: o auto;
     
 }
 
@@ -26,22 +26,24 @@ p{
     color: rgb(85, 85, 85);
 }
 
-/* Dark Mode */
-#theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  background: white;
-  cursor: pointer;
-  border-color: rgb(49, 3, 31);
-  border-radius: 0.4rem;
-  font-size: 1rem;
-  font-weight: 400;
-  transition: background-color 0.3s, color 0.3s;
-  color:black
-}
+/* Toggle button */
+#togglebutton {
 
+}
+.mode-btn{
+  border: none;
+  background-color:#fff;
+}
+.mode-btn-dark{
+  background-color: #1a0d1a;
+  border: none;
+}
+.mode-btn-style{
+  stroke: #1a0d1a;
+}
+.mode-btn-style-dark{
+  stroke: #fff;
+}
 .darkmode {
   background-color: #1a0d1a;
   color: #ffffff;
@@ -50,6 +52,9 @@ p{
   color: #b0b0b0;
 }
 
+.darkmode .nav-links {
+  display: none;
+}
 .darkmode nav {
   background-color: #1a0d1a;
   color: #ffffff;
@@ -58,6 +63,11 @@ p{
 .darkmode .nav-links li a {
   color: #ffffff;
 }
+.darkmode .nav-links.active {
+    background-color: #3a082b;
+    color: white;
+  }
+  
 
 .darkmode .nav-links li a:hover {
   background-color: #3d0140;
@@ -66,7 +76,7 @@ p{
 }
 .darkmode .btn {
   background-color: rgba(168, 7, 122, 0.626);
-  color: whitesmoke;
+  /* color: whitesmoke; */
   border-color: whitesmoke;
   transition: background-color 0.3s, color 0.3s;
   border-radius: none;
@@ -196,8 +206,15 @@ p{
 nav {
   color: rgb(35, 13, 35);
   padding: 1rem 2rem;
-  position: absolute;
   width: 100%;
+}
+.nav-both{
+  display: flex;
+  justify-content: center;
+}
+.not{
+  display: none;
+  
 }
 
 .nav-container {
@@ -211,6 +228,7 @@ nav {
   font-size: 2.3rem;
   font-weight: 600;
   color: #39082d;
+  margin-right: 7rem;
 }
 
 .nav-links {
@@ -233,10 +251,6 @@ nav {
   background-color: #3d0140;
   color: #f1edf2;
   
-}
-
-.hamburger {
-  display: none;
 }
 
 .hamburger {
@@ -392,7 +406,7 @@ transform: scale(0.96);
   background-color: #f1f1f1;
   padding: 1rem;
   border-radius: 10px;
-  max-width: 100%;
+ 
   text-align: center;
 }
 
