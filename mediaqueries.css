@@ -4,74 +4,97 @@
 -------------------- */
 
 @media (max-width: 390px) {
+ 
+  @media screen and (max-width: 390px) {
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-size: 14px;
-    max-width: 100%; /* Adjust base font size for smaller screens */
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
   }
 
   .nav-links {
-    gap: 0.5rem; /* Reduce gap between nav links */
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
-  .nav-both{
-  display: flex;
-  justify-content: space-between;
-}
-  .not{
-  display: inline-block;
-  
-}
+  .nav-both {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .not {
+    display: inline-block;
+    width: 100%;
+  }
 
   .profile-pic {
-    width: 150px; /* Smaller profile picture */
-    height: 150px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
   }
 
   .profile-con {
-    flex-direction: column; /* Stack profile content vertically */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
   .about-content {
-    flex-direction: column; /* Stack about section content vertically */
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    width: 100%;
   }
 
-  .info-boxes {
-    flex-direction: column; /* Stack info boxes vertically */
+  .info-boxes,
+  .exp-box,
+  .about-section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
-  .exp-box {
-    flex-direction: column; /* Stack experience boxes vertically */
-    align-items: center;
-  }
-
-  .procards {
-    width: 100%; /* Full width for project cards */
-    padding: 1rem; /* Reduced padding */
+   .procards {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 1rem;
+    padding: 3rem;
+    max-width: 100%;
   }
 
   .procard {
-    flex-direction: column; /* Stack project cards vertically */
-    align-items: center;
-    max-width: 100%; /* Ensure cards fit within screen */
-  }
-  #hamburger{
-    display: block !important; /* Show hamburger icon */
-    font-size: 2rem ; /* Larger icon for visibility */
-    cursor: pointer;
-    z-index: 1002; /* Ensure it appears above other elements */
-    color: blueviolet; /* Color for visibility */
-    /* left: 30px;
-    right: none; */
-    
-  }
-  .about-section{
     max-width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;     /* Optional: style */
   }
 }
+
+  #hamburger {
+    display: block !important;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1002;
+    right: none;
+    left: 18rem;
+    color: blueviolet;
+  }
+}
+
+
+
 
 @media screen and (max-width: 768px) {
   /* Stack nav links vertically and show hamburger */
@@ -157,10 +180,7 @@
   }
 
   /* Project cards stack */
-  .procard {
-    flex-direction: column;
-    align-items: center;
-  }
+  
 
   .procards {
     width: 100%;
