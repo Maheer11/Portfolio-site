@@ -6,7 +6,7 @@
 @media (max-width: 390px) {
   body {
     font-size: 14px;
-    max-width: fit-content; /* Adjust base font size for smaller screens */
+    max-width: 100%; /* Adjust base font size for smaller screens */
   }
 
   .nav-links {
@@ -56,6 +56,7 @@
   .procard {
     flex-direction: column; /* Stack project cards vertically */
     align-items: center;
+    max-width: 100%; /* Ensure cards fit within screen */
   }
   #hamburger{
     display: block !important; /* Show hamburger icon */
@@ -66,6 +67,9 @@
     /* left: 30px;
     right: none; */
     
+  }
+  .about-section{
+    max-width: 100%;
   }
 }
 

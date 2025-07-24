@@ -352,8 +352,9 @@ transform: scale(0.96);
 
 /*ABOUT ME SECTION */
 .about-section {
-  padding: 4rem 2rem;
+  padding: 4rem;
   background: #fff;
+  max-width: 100%;
 }
 
 .about-title,
@@ -370,6 +371,7 @@ transform: scale(0.96);
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  max-width: 100%;
 }
 
 .left-side {
@@ -386,12 +388,17 @@ transform: scale(0.96);
 
 .right-side {
   flex: 1;
-  max-width: 600px;
+  max-width: 100%;
 }
 
 .about-description {
-  margin-bottom: 2rem;
-  line-height: 1.7;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align:left;
+  justify-content: left;
+  max-width: 100%;
+  word-spacing: 0.1rem;
+
 }
 
 .info-boxes {
@@ -482,9 +489,9 @@ experience-section {
 
 /* Container for the entire project section */
 .project-section-head {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
+  padding: 40px;
   text-align: center;
+  max-width: 100%;
 }
 
 .project-section-head p {
@@ -502,8 +509,9 @@ experience-section {
 
 /* Flex container for project cards */
 .pro-container {
-  padding: 4rem 2rem;
-  background: #f7f7f7;
+  padding: 4rem;
+  display: flex;
+  max-width: 100%;
 }
 
 /* Each individual card */
@@ -514,6 +522,7 @@ experience-section {
   gap: 2rem;
   padding: 2rem;
   transition: transform 0.5s, ease-in-out;
+  max-width: 100%;
 }
 .procard:hover {
   animation: transform 0.4s ease;
