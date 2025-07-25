@@ -13,13 +13,14 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    max-width: 90%;
-    margin: o auto;
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
     
 }
 
 html{
     scroll-behavior: smooth;
+    font-size: 90%;
     }
 
 p{
@@ -53,22 +54,26 @@ p{
 }
 
 .darkmode .nav-links {
-  display: none;
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  justify-content: center;
 }
+
 .darkmode nav {
   background-color: #1a0d1a;
   color: #ffffff;
 }
 
+ .darkmode .bar{
+      background-color: #efecee;
+    }
+
+
 .darkmode .nav-links li a {
   color: #ffffff;
 }
-.darkmode .nav-links.active {
-    background-color: #3a082b;
-    color: white;
-  }
   
-
 .darkmode .nav-links li a:hover {
   background-color: #3d0140;
   color: #f1edf2;
@@ -205,7 +210,6 @@ p{
 /*NAVIGATION BAR*/
 nav {
   color: rgb(35, 13, 35);
-  padding: 1rem 2rem;
   width: 100%;
 }
 .nav-both{
@@ -220,8 +224,9 @@ nav {
 .nav-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;;
+  align-items: flex-start;
   margin: auto;
+  padding: 0.3rem;
 }
 
 .logo {
@@ -258,17 +263,26 @@ nav {
   font-size: 2rem;
   cursor: pointer;
 }
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #300a30;
+  -webkit-transition: all 0.3s ease-in-out ;
+  transition: all 0.3s ease-in-out;
+}
 
 /* PROFILE SECTION */
 #profile {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 2rem;
   gap: 3rem;
   flex-wrap: wrap;
-  width: 100%;
-  height: 80%;
+  height: auto;
+  margin-top: 4.5rem;
 }
 
 .profile-con {
@@ -352,9 +366,10 @@ transform: scale(0.96);
 
 /*ABOUT ME SECTION */
 .about-section {
-  padding: 4rem;
+  padding: 1rem ;
   background: #fff;
   max-width: 100%;
+  margin-top: 8rem;
 }
 
 .about-title,
@@ -367,13 +382,21 @@ transform: scale(0.96);
 .about-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
   max-width: 100%;
+  padding: 5rem;
 }
-
+.fast-forward {
+  width: 100px;
+  height: auto;
+  margin-left: 2rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+}
 .left-side {
   flex: 1;
   display: flex;
@@ -418,9 +441,9 @@ transform: scale(0.96);
 }
 
 /*SKILLS SECTION */
-experience-section {
+.experience-section {
   padding: 4rem 2rem;
-  background: #f7f7f7;
+  margin-bottom: 5rem;
 }
 
 .section-header {
@@ -441,7 +464,7 @@ experience-section {
 
 .setexp {
   background: white;
-  padding: 2rem;
+  padding: 5rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   max-width: 100%;

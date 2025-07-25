@@ -59,43 +59,47 @@
   .nav-links {
     display: none;
     flex-direction: column;
-    gap: 1rem;
-    background-color: rgb(255, 255, 255);
+    gap: 2rem;
+    background-color: transparent;
     position: absolute;
-    top: 120px;
-    right: 40px;
-    padding: 1rem;
+    top: 60px;
+    z-index: 1000;
+    text-align: center;
+    transition: 0.10s ease, padding 0.5s ease;
+    width: 100%;
     border-radius: 10px;
+    left: -100;
+    padding: 4rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
     display: flex;
-  }
+    left: 0;
 
+  }
   .nav-both{
   display: flex;
   justify-content: space-between;
 }
 
   .not{
-  display: inline-block;
+  display: block;
   
 }
-
-
+  .darkmode .nav-links{
+    display: none;
+  }
   .darkmode .hamburger {
-    display: flex;
+    display: block;
     color: white;
    
-    
-  }
-  .darkmode .nav-links.active {
-    background-color: #3a082b;
-    color: white;
-    bottom: 60px;
-  }
-  
+   }
+   .darkmode .nav-links.active {
+    display: flex;
+    left: 0;
+   }
+
   .darkmode {
     bottom: 5rem;
   }
@@ -107,8 +111,8 @@
   }
   /* Profile section image smaller */
   .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   }
 
   .profile-con {
@@ -142,25 +146,48 @@
 
   .procards {
     width: 100%;
-    padding: 2rem;
+    padding: 6rem;
+
   }
 
    .hamburger {
-    position: relative;
-    display: inline-block;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1002  !important;
-    color: blueviolet;
+    display: block;
+    padding: 0.8rem;
+    z-index: 1002;
+   
     /* right: 20px !important;
     top: 20px !important; */
   
   }
-
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+     transform: translateY(-8px) rotate(-45deg);
+  }
   .scroll-arrow{
     display: none;
   }
- 
+ .nav-links li a{
+  margin: 1rem;
+ }
+
+  .nav-links li a:hover {
+    color: #efecee;
+    background-color: rgb(57, 3, 31);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+
+  .nav-both {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 
@@ -177,7 +204,7 @@
   }
 
   body {
-    font-size: 14px;
+    font-size: 1.4rem;
     max-width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     margin: 0;
@@ -234,9 +261,10 @@
    .procards {
     display: flex;
     flex-direction: column; /* Stack vertically */
-    gap: 1rem;
+    gap: 2rem;
     padding: 3rem;
     max-width: 100%;
+    margin-bottom: 2rem;
   }
 
   .procard {
@@ -257,8 +285,13 @@
     left: 18rem;
     color: blueviolet;
   }
+  section{
+    margin-top: 1rem;
+
+  }
+  section:first-child{
+    margin-top: 0;
+  }
+
 }
-
-
-
 
