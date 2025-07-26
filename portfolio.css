@@ -656,3 +656,155 @@ transform: scale(0.96);
   color: white;
 }
 
+/* CONTACT SECTIOM */
+.contact-area h1{
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 5rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-p{
+  font-size: 1.5rem;
+  font-weight: 400;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#contactForm{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content:center;
+  text-align:right;
+  font-size: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+
+}
+
+.contact-info {
+  background: #fff;
+  padding: 4rem;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.contact-form h3 {
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-group input {
+  flex: 1;
+  font-size: 17;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.btn-send {
+  background-color: rgb(153, 97, 150);
+  color: #fff;
+  border: none;
+  padding: 1.5rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 300;
+  transition: 0.3s ease;
+  font-size: 16;
+}
+
+.btn-send:hover {
+  background-color: rgb(71, 1, 49);
+}
+
+.contact-info {
+  background-color: #250326;
+  color:whitesmoke;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 15;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: rgb(43, 4, 32);
+}
+
+.contactus h3{
+  font-size: 35;
+  font-weight: 400;
+}
+
+#formStatus {
+  margin-top: 1rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.status.sending {
+  background-color: #f3f3f3;
+  color: #555;
+  border: 1px solid #ccc;
+}
+
+.status.success {
+  background-color: #e6ffed;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.status.error {
+  background-color: #ffeaea;
+  color: #c62828;
+  border: 1px solid #c62828;
+}

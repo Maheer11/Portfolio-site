@@ -106,3 +106,42 @@ filterButtons.forEach((button) => {
       origin: { y: 0.6 },
     });
   }); */
+
+
+ /* CONTACT FORM FEED BACK */
+  document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.textContent = "Sending...";
+    status.style.color = "#555";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        status.textContent = "✅ Message sent successfully!";
+        status.style.color = "green";
+        form.reset();
+      } else {
+        status.textContent = "❌ Something went wrong. Please try again.";
+        status.style.color = "red";
+      }
+    } catch (error) {
+      status.textContent = "⚠️ Network error. Check your connection.";
+      status.style.color = "red";
+    }
+  });
+});
+
+

@@ -188,6 +188,10 @@
     align-items: center;
     width: 100%;
   }
+
+    .contact-container{
+      
+    }
 }
 
 
@@ -196,132 +200,104 @@
    Max-width: 390px
 -------------------- */
 
-
+@media (max-width: 390px) {
+ 
   @media screen and (max-width: 390px) {
-  html, body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-
   * {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
-  .container, section, main {
-    width: 100%;
+  body {
     max-width: 100%;
-    padding: 1rem;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
   }
 
-
+  .nav-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
 
   .nav-both {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
-  }
-
-  .hamburger {
-    display: block;
-    padding: 0.5rem;
-    z-index: 1002;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: transparent;
-    position: absolute;
-    top: 60px;
-    left: -100%; /* Hide off-screen by default */
+    flex-wrap: wrap;
     width: 100%;
-    padding: 2rem 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    z-index: 1000;
-    transition: left 0.3s ease;
   }
 
-  .nav-links.active {
-    display: flex;
-    left: 0;
+  .not {
+    display: inline-block;
+    width: 100%;
   }
 
-  .nav-links li a {
-    margin: 0.5rem;
-  }
-
-  .nav-links li a:hover {
-    color: #efecee;
-    background-color: rgb(57, 3, 31);
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-  }
-
-  .darkmode .nav-links {
-    display: none;
-  }
-
-  .darkmode .nav-links.active {
-    display: flex;
-    left: 0;
-  }
-
-  .darkmode .hamburger {
-    display: block;
-    color: white;
-  }
-
-  .scroll-arrow {
-    display: none;
-  }
-
-  /* Profile Section */
   .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
   }
 
   .profile-con {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1rem;
-  }
-
-  /* About Section */
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .info-boxes {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Experience Section */
-  .exp-box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Projects Section */
-  .procards {
-    flex-direction: column;
     width: 100%;
-    padding: 2rem 1rem;
   }
 
-  /* Darkmode position correction if used */
-  .darkmode {
-    bottom: 0;
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
   }
+
+  .info-boxes,
+  .exp-box,
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+   .procards {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    gap: 2rem;
+    padding: 3rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .procard {
+    max-width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;     /* Optional: style */
+  }
+}
+
+  #hamburger {
+    display: block !important;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1002;
+    right: none;
+    left: 18rem;
+    color: blueviolet;
+  }
+  section{
+    margin-top: 1rem;
+
+  }
+  section:first-child{
+    margin-top: 0;
+  }
+
+}
+
+#Contact{
+  width: 100%;
 }
