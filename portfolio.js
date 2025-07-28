@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 // Hamburger menu toggle
 const hamburger = document.getElementById("hamburger");
@@ -27,27 +27,24 @@ const svg = document.querySelector(".mode-btn-style");
 
 let dark = true;
 
-
 toggleButton.addEventListener("click", (e) => {
-  e.preventDefault()
-  console.log(dark)
+  e.preventDefault();
+  console.log(dark);
   if (dark) {
-    
     body.classList.toggle("darkmode");
     toggleButton.classList.remove("mode-btn");
     toggleButton.classList.add("mode-btn-dark");
     svg.classList.remove("mode-btn-style");
     svg.classList.add("mode-btn-style-dark");
-    dark = false
-  }
-  else{
-    console.log(dark)
+    dark = false;
+  } else {
+    console.log(dark);
     body.classList.toggle("darkmode");
     toggleButton.classList.remove("mode-btn-dark");
     toggleButton.classList.add("mode-btn");
     svg.classList.remove("mode-btn-style-dark");
     svg.classList.add("mode-btn-style");
-    dark = true
+    dark = true;
   }
 
   // if (body.classList.contains("dark-mode")) {
@@ -107,9 +104,8 @@ filterButtons.forEach((button) => {
     });
   }); */
 
-
- /* CONTACT FORM FEED BACK */
-  document.addEventListener("DOMContentLoaded", () => {
+/* CONTACT FORM FEED BACK */
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
 
@@ -144,4 +140,15 @@ filterButtons.forEach((button) => {
   });
 });
 
+const readMoreBtn = document.getElementById("readMoreBtn");
+const moreText = document.getElementById("moreText");
 
+readMoreBtn.addEventListener("click", () => {
+  if (moreText.style.display === "inline") {
+    moreText.style.display = "none";
+    readMoreBtn.textContent = "Read more";
+  } else {
+    moreText.style.display = "inline";
+    readMoreBtn.textContent = "Read less";
+  }
+});

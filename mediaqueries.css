@@ -1,11 +1,8 @@
-/* --------------------
-   🖥️ DESKTOP VIEW
-   Max-width: 900px and 1300px  */
-@media screen and (min-width: 900px) and (max-width: 1250px) {
+@media screen and (max-width: 1100px) {
   .nav-links {
     gap: 1.5rem;
   }
-  .not{
+  .not {
     display: none;
   }
 
@@ -35,29 +32,25 @@
     flex-wrap: wrap;
     justify-content: center;
   }
- .card-body h3 {
-  font-size: 0.7rem;
-  color: #333;
-  margin-bottom: 0.7rem;
- }
-
-  .procard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+  .card-body h3 {
+    font-size: 0.7rem;
+    color: #333;
+    margin-bottom: 0.7rem;
   }
 
-    .hamburger {
+  .procard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hamburger {
     display: none;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 899px) {
+@media screen and (max-width: 900px) {
   .procard {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .procards {
@@ -77,7 +70,7 @@
     top: 60px;
     z-index: 1000;
     text-align: center;
-    transition: 0.10s ease, padding 0.5s ease;
+    transition: 0.1s ease, padding 0.5s ease;
     width: 100%;
     border-radius: 10px;
     left: -100;
@@ -88,42 +81,36 @@
   .nav-links.active {
     display: flex;
     left: 0;
-
   }
-  .nav-container{
+  .nav-container {
     max-width: 100%;
-    
   }
-  .nav-both{
-  display: flex;
-  justify-content: space-between;
-}
+  .nav-both {
+    display: flex;
+    justify-content: space-between;
+  }
 
-  .not{
-  display: block;
-  
-}
+  .not {
+    display: block;
+  }
 
-
-  .darkmode .nav-links{
+  .darkmode .nav-links {
     display: none;
   }
   .darkmode .hamburger {
     display: block;
     color: white;
-   
-   }
-   .darkmode .nav-links.active {
+  }
+  .darkmode .nav-links.active {
     display: flex;
     left: 0;
-   }
+  }
 
   .darkmode {
     bottom: 5rem;
   }
 
-
-  .darkmode .nav-links li a:hover{
+  .darkmode .nav-links li a:hover {
     color: #3a082b;
     background-color: white;
   }
@@ -133,8 +120,8 @@
     height: 300px;
   }
 
-  #profile{
-  max-width: 100%;
+  #profile {
+    max-width: 100%;
   }
 
   .profile-con {
@@ -163,17 +150,15 @@
   }
 
   /* Project cards stack */
-  .procard{
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
+  .procard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-   .hamburger {
+  .hamburger {
     display: block;
     text-align: right;
     z-index: 1002;
-   
   }
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
@@ -182,14 +167,14 @@
     transform: translateY(8px) rotate(45deg);
   }
   .hamburger.active .bar:nth-child(3) {
-     transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
-  .scroll-arrow{
+  .scroll-arrow {
     display: none;
   }
- .nav-links li a{
-  margin: 1rem;
- }
+  .nav-links li a {
+    margin: 1rem;
+  }
 
   .nav-links li a:hover {
     color: #efecee;
@@ -204,32 +189,28 @@
     align-items: center;
     width: 100%;
   }
-
-  
 }
-
 
 /* --------------------
    📱 MOBILE VIEW
    Max-width: 390px
 -------------------- */
- 
-  @media screen and (max-width: 390px) {
-    body{
-      max-width: 100%;
-    }
+
+@media screen and (max-width: 390px) {
+  body {
+    max-width: 100%;
+  }
   .nav-links {
     gap: 0.5rem;
     flex-wrap: wrap;
   }
 
-  .hamburger{
+  .hamburger {
     max-width: 100%;
     justify-items: flex-end;
   }
 
   .not {
-    display: inline-block;
     width: 100%;
   }
 
@@ -246,39 +227,44 @@
     text-align: center;
     width: 100%;
   }
-  .about-section{
+  .about-section {
     max-width: 100%;
     flex-direction: column;
   }
-  .about-content{
+  .about-content {
     max-width: 100%;
   }
-  .about-image{
+  .about-image {
     width: 100%;
   }
-  .about-descriptiom{
+  .about-descriptiom {
     max-width: 100%;
     justify-content: flex-start;
   }
-   
+  #moreText {
+    display: none;
+  }
+  #readMoreBtn {
+    display: inline-block;
+    background-color: transparent;
+    color: blue;
+    border: none;
+    cursor: pointer;
+  }
 
   .procard {
-    max-width: 100%;
-    gap: 2rem;
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  section{
+  section {
     margin-top: 1rem;
-
   }
-  section:first-child{
+  section:first-child {
     margin-top: 0;
   }
-
 }
 
-#Contact{
+#Contact {
   width: 100%;
 }
-  
