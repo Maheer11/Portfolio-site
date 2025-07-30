@@ -201,6 +201,10 @@ p {
   background-color: #a58bd4;
 }
 
+.darkmode .contactus h3 {
+  color: #250326;
+}
+
 /*NAVIGATION BAR*/
 nav {
   color: rgb(35, 13, 35);
