@@ -138,17 +138,17 @@ document.addEventListener("DOMContentLoaded", () => {
       status.style.color = "red";
     }
   });
-});
 
-const readMoreBtn = document.getElementById("readMoreBtn");
-const moreText = document.getElementById("moreText");
+  const readMoreBtn = document.getElementById("readMoreBtn");
+  const moreText = document.getElementById("moreText");
 
-readMoreBtn.addEventListener("click", () => {
-  if (moreText.style.display === "inline") {
-    moreText.style.display = "none";
-    readMoreBtn.textContent = "Read more";
-  } else {
-    moreText.style.display = "inline";
-    readMoreBtn.textContent = "Read less";
-  }
+  readMoreBtn.addEventListener("click", () => {
+    if (moreText.style.display === "inline") {
+      moreText.style.display = "none";
+      readMoreBtn.textContent = "Read more ...";
+    } else {
+      moreText.style.display = "inline";
+      readMoreBtn.textContent = "...Read less";
+    }
+  });
 });
