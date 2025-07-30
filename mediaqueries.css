@@ -289,6 +289,7 @@
   }
   #readMoreBtn {
     border: 2px solid rgb(220, 205, 234);
+    width: 45%;
     padding: 1rem 2rem;
     background-color: #0066cc;
     color: white;
