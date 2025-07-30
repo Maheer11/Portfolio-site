@@ -208,6 +208,17 @@
   }
 }
 
+@media screen and (max-width: 485px) {
+  .procard {
+    grid-template-columns: repeat(1, 1fr); /* or just 1fr */
+    gap: 3rem;
+    padding: 1.5rem;
+  }
+  .procards h3 {
+    margin-bottom: 3rem;
+  }
+}
+
 /* --------------------
    📱 MOBILE VIEW
    Max-width: 390px

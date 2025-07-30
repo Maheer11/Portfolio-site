@@ -426,8 +426,15 @@ nav {
   text-align: left;
 }
 #readMoreBtn {
-  display: none;
+  width: 30%;
+  border: 2px solid rgb(220, 205, 234);
+  background-color: #0066cc;
+  padding: 1rem;
+  color: white;
+  font-weight: 300;
+  font-size: 15;
 }
+
 .catabout img {
   width: 100%;
   max-width: 400px;
