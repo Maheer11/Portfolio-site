@@ -584,7 +584,7 @@ nav {
 .project-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 3rem;
+  padding: 1.5rem;
   gap: 3rem;
 }
 .project-head {
