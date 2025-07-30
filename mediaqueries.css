@@ -1,3 +1,11 @@
+@media screen and (max-width: 1400px) {
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .nav-links {
     gap: 1.5rem;
@@ -46,6 +54,12 @@
   .hamburger {
     display: none;
   }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
 }
 @media screen and (max-width: 900px) {
   .procard {
@@ -55,6 +69,12 @@
 
   .procards {
     justify-content: center;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -189,6 +209,11 @@
     align-items: center;
     width: 100%;
   }
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
 }
 
 /* --------------------
@@ -215,8 +240,8 @@
   }
 
   .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
   }
 
@@ -232,29 +257,19 @@
     flex-direction: column;
   }
   .about-content {
-    max-width: 100%;
-  }
-  .about-image {
-    width: 100%;
-  }
-  .about-descriptiom {
-    max-width: 100%;
-    justify-content: flex-start;
-  }
-  #moreText {
-    display: none;
-  }
-  #readMoreBtn {
-    display: inline-block;
-    background-color: transparent;
-    color: blue;
-    border: none;
-    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .procard {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+  .card-body {
+    color: #3a082b;
   }
 
   section {
