@@ -276,6 +276,16 @@
     max-width: 280px;
     border-radius: 12px;
   }
+  #readMoreBtn {
+    border: 2px solid rgb(220, 205, 234);
+    padding: 1rem 2rem;
+    background-color: #0066cc;
+    color: white;
+    font-weight: 300;
+  }
+  #moreText {
+    font-size: 15;
+  }
 
   .typing {
     font-size: 17;
@@ -291,6 +301,10 @@
     grid-template-columns: repeat(1, 1fr); /* or just 1fr */
     gap: 1.5rem;
     padding: 1.5rem;
+  }
+
+  .project-head {
+    grid-column: 2/-1;
   }
 
   .card-body {
