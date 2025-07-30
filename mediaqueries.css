@@ -77,14 +77,13 @@
     display: none;
     flex-direction: column;
     gap: 2rem;
-    background-color: transparent;
+    background-color: whitesmoke;
     position: absolute;
-    top: 60px;
+    top: 150px;
     z-index: 1000;
     text-align: center;
     transition: 0.1s ease, padding 0.5s ease;
     width: 100%;
-    border-radius: 10px;
     left: -100;
     padding: 4rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -186,6 +185,9 @@
   }
   .nav-links li a {
     margin: 1rem;
+  }
+  .darkmode .nav-links {
+    background-color: #3a082b;
   }
 
   .nav-links li a:hover {
