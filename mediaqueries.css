@@ -209,13 +209,114 @@
 }
 
 @media screen and (max-width: 485px) {
+  body {
+    max-width: 100%;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    max-width: 100%;
+    justify-items: flex-end;
+  }
+
+  .not {
+    width: 100%;
+  }
+
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .profile-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-content {
+    grid-template-columns: (1, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .about-image-wrapper,
+  .about-description,
+  .column-wrapper {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .column-wrapper {
+    gap: 1rem;
+  }
+
+  .catabout img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 12px;
+  }
+  #readMoreBtn {
+    border: 2px solid rgb(220, 205, 234);
+    width: 45%;
+    padding: 1rem 2rem;
+    background-color: #0066cc;
+    color: white;
+    font-weight: 300;
+  }
+
+  #moreText {
+    font-size: 15;
+  }
+
+  .typing {
+    font-size: 17;
+  }
+  .havard {
+    padding: 1rem 2rem;
+  }
+
+  .info-cards {
+    font-size: 0.9rem;
+  }
   .procard {
     grid-template-columns: repeat(1, 1fr); /* or just 1fr */
-    gap: 3rem;
+    gap: 1.5rem;
     padding: 1.5rem;
   }
-  .procards h3 {
-    margin-bottom: 3rem;
+
+  .project-head {
+    grid-column: 2/-1;
+  }
+
+  .card-body {
+    color: #3a082b;
+  }
+
+  section {
+    margin-top: 1rem;
+  }
+  section:first-child {
+    margin-top: 0;
+  }
+
+  #Contact {
+    width: 100%;
   }
 }
 
@@ -295,6 +396,7 @@
     color: white;
     font-weight: 300;
   }
+
   #moreText {
     font-size: 15;
   }

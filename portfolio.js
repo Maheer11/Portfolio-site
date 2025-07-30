@@ -142,13 +142,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const readMoreBtn = document.getElementById("readMoreBtn");
   const moreText = document.getElementById("moreText");
 
+  // Ensure it's collapsed on load
+  moreText.classList.add("collapsed");
+
   readMoreBtn.addEventListener("click", () => {
-    if (moreText.style.display === "inline") {
-      moreText.style.display = "none";
-      readMoreBtn.textContent = "Read more ...";
+    if (moreText.classList.contains("collapsed")) {
+      moreText.classList.remove("collapsed");
+      moreText.classList.add("expanded");
+      readMoreBtn.textContent = "Read Less";
     } else {
-      moreText.style.display = "inline";
-      readMoreBtn.textContent = "...Read less";
+      moreText.classList.remove("expanded");
+      moreText.classList.add("collapsed");
+      readMoreBtn.textContent = "Read More";
     }
   });
 });
