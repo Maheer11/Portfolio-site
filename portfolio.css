@@ -202,7 +202,7 @@ p {
 }
 
 .darkmode .contactus h3 {
-  color: #250326;
+  color: #f0e8f0;
 }
 
 /*NAVIGATION BAR*/
@@ -762,7 +762,7 @@ nav {
   width: 100%;
   margin: auto;
   padding: 2rem;
-  background: #f9f9f9;
+  background: #1a0d1a;
   border-radius: 10px;
 }
 
@@ -848,6 +848,7 @@ textarea {
 .contactus h3 {
   font-size: 35;
   font-weight: 400;
+  color: white;
 }
 
 #formStatus {
