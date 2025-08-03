@@ -156,4 +156,54 @@ document.addEventListener("DOMContentLoaded", () => {
       readMoreBtn.textContent = "Read More";
     }
   });
+  const buttons = document.querySelectorAll(".ed");
+  const sections = document.querySelectorAll(".info-cards");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.getAttribute("data-filter");
+
+      // Hide all sections
+      sections.forEach((section) => {
+        section.classList.remove("active");
+      });
+
+      // Show selected section
+      document.getElementById(target).classList.add("active");
+    });
+  });
+
+  // Show Experience section by default
+  document.getElementById("experience").classList.add("active");
+});
+
+const parents = document.querySelectorAll(".edexParent");
+
+parents.forEach((parent) => {
+  parent.addEventListener("click", () => {
+    //fist close all other .edexChild elements
+    parents.forEach((p) => {
+      if (p !== parent) {
+        p.classList.remove("active");
+        const child = p.querySelector(".edexChild");
+        if (child) child.style.display = "none";
+      }
+    });
+    //Togggle current one
+    parent.classList.toggle("open");
+    const child = parent.querySelector(".edexChild");
+    if (child) {
+      child.style.display = parent.classList.contains("open")
+        ? "block"
+        : "none";
+    }
+  });
+});
+
+document.querySelectorAll(".edexParent").forEach((parent) => {
+  if (parent.textContent.includes("Education")) {
+    parent.classList.add("open");
+    const child = parent.querySelector(".edexChild");
+    if (child) child.style.display = "block";
+  }
 });

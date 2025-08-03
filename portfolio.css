@@ -456,50 +456,22 @@ nav {
   font-weight: 300;
   font-size: 15;
 }
-
-.catabout img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
-  border: 4px solid #0066cc;
+.filter-buttons button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #0066cc;
+  color: white;
+  cursor: pointer;
 }
 
-.typing {
-  overflow: hidden; /* Hides overflowing text */
-  white-space: nowrap; /* Prevents wrapping */
-  border-right: 3px solid #1674c0;
-  color: #1674c0;
-  font-size: 25px;
-  font-weight: 600;
-  width: 0; /* Start from 0 width */
-  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
-  margin-bottom: 1rem;
+.info-cards {
+  display: none;
+  margin-top: 1rem;
 }
 
-.typing:nth-of-type(2) {
-  animation-delay: 3.5s; /* Wait for first to finish */
-  animation-fill-mode: forwards;
-}
-
-/* Typing animation */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 30ch; /* Adjust to your text length */
-  }
-}
-
-/* Blinking cursor */
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-.catabout img:hover {
-  transform: translateY(10px);
+.info-cards.active {
+  display: block;
 }
 
 .info-cards {
@@ -511,6 +483,101 @@ nav {
 }
 .aboutText {
   font-size: 16;
+}
+.edex1 {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding-right: 3rem;
+}
+
+.edex {
+  padding: 2rem;
+}
+.edex-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3a073a;
+  font-weight: 400;
+}
+.edexul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/* Hide child list by default */
+.edexChild {
+  display: block;
+  list-style-type: square;
+  color: #6a1556;
+  font-weight: 450;
+  font-size: 15px;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+  justify-items: flex-start;
+  max-height: 0;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+.edexChild.show {
+  display: block;
+}
+
+.edexChild li {
+  text-decoration: none !important;
+}
+
+/* Show child when parent is "open" */
+.edexParent.open .edexChild {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+  max-height: 500px;
+}
+
+.edexParent {
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 10px;
+  list-style: none;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.edexParent:hover {
+  background-color: whitesmoke;
+  color: #1a202c;
+  border-radius: 1rem;
+  padding: 0.7rem;
+  z-index: 1000;
+}
+
+.edexParent::after {
+  content: "〒"; /* caret or icon */
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.edexParent.open::after {
+  transform: translateY(-50%) rotate(180deg); /* rotate icon when open */
+}
+/* Optional animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*SKILLS SECTION */
@@ -762,15 +829,8 @@ nav {
   width: 100%;
   margin: auto;
   padding: 2rem;
-  background: #1a0d1a;
-  border-radius: 10px;
-}
-
-.contact-info {
-  background: #fff;
-  padding: 4rem;
-  border-radius: 10px;
-  height: fit-content;
+  background: rgb(36, 1, 23);
+  border-radius: 3px;
 }
 
 .contact-form h3 {
@@ -779,13 +839,21 @@ nav {
 
 .input-group {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.input-group input {
+.inputstyle {
   flex: 1;
-  font-size: 17;
+  border: none;
+  font-size: 14;
+  font-weight: 200;
+  background-color: rgb(36, 1, 23);
+  border-color: white;
+  color: white;
+  border: 1px solid #f0edf4;
+  padding: 1rem 3rem;
+  border-radius: 5px;
 }
 
 input,
@@ -793,8 +861,7 @@ textarea {
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #f0edf4;
 }
 
 textarea {
@@ -803,7 +870,8 @@ textarea {
 }
 
 .btn-send {
-  background-color: rgb(153, 97, 150);
+  width: 50%;
+  background-color: rgb(10, 65, 124);
   color: #fff;
   border: none;
   padding: 1.5rem 0.7rem;
@@ -819,8 +887,9 @@ textarea {
 }
 
 .contact-info {
-  background-color: #250326;
-  color: whitesmoke;
+  background-color: rgb(36, 1, 23);
+  color: white;
+  padding: 3rem;
 }
 
 .contact-info p {
@@ -849,6 +918,11 @@ textarea {
   font-size: 35;
   font-weight: 400;
   color: white;
+}
+.input-group {
+  border-width: none;
+  padding: 3rem 3rem;
+  border-radius: 12rem;
 }
 
 #formStatus {

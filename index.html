@@ -89,7 +89,7 @@
       <!-- Column 2: Description -->
       <div class="about-description">
         <p class="aboutText">
-          I am a passionate Front End Developer with over 2 years of hands-on experience
+          I am a passionate Front End Developer with over 4 years of hands-on experience
           building dynamic and responsive web applications. I specialize in both frontend
           and backend technologies, including React, HTML, CSS, Tailwind, and JavaScript.
           <span id="moreText" class="collapsed">
@@ -102,32 +102,39 @@
             across devices and screen sizes. My goal is to bridge design and functionality, ensuring that every
             interaction feels
             natural, fast, and user-focused.
-
-
           </span>
         </p>
         <button id="readMoreBtn">Read More </button>
-        <div class="info-cards">
-          <h3>Experience</h3>
-          <p class="havard">2+ years<br>Front End Development</p>
+      </div>
+      <div class="edex1">
+        <div>
+          <h1 class="edex-header">
+            Career Highlights
+          </h1>
         </div>
+        <ul class="edexul">
+          <li class="edexParent">
+            Education
+            <ul class="edexChild">
+              <li>Bsc. Computer Science</li>
+              <li>JavaScript Certification</li>
+              <li>Web Development Certification</li>
+            </ul>
+          </li>
 
-        <div class="info-cards">
-          <h4>Education</h4>
-          <p class="havard">Bachelor's Degree<br>Computer Science</p>
-          <p class="havard">Associate Programme<br>Harvard CS50 Programming<br>Current</p>
-        </div>
+          <li class="edexParent">
+            Experience
+            <ul class="edexChild">
+              <li>4 Years Frontend Development</li>
+            </ul>
+          </li>
+        </ul>
+
       </div>
 
-      <!-- Column 3: Typing Text + Image -->
-      <div class="column-wrapper">
-        <p class="typing">Tech fuels my creativity.</p>
-        <p class="typing">I turn ideas into code.</p>
-        <div class="catabout">
-          <img src="images/catabout.jpg" alt="Cat at computer" />
-        </div>
-      </div>
     </div>
+
+
   </section>
 
 
@@ -295,12 +302,12 @@
         <h3>Get in Touch</h3>
         <form id="contactForm" action="https://formspree.io/f/xanbojok" method="POST">
           <div class="input-group">
-            <input type="text" placeholder="Enter Name..." name="name" required />
-            <input type="email" placeholder="Enter Email..." name="email" required />
+            <input class="inputstyle" type="text" placeholder="Enter Name..." name="name" required />
+            <input class="inputstyle" type="email" placeholder="Enter Email..." name="email" required />
           </div>
-          <input type="text" placeholder="Enter Subject..." name="subject" required />
-          <textarea placeholder="Enter Comment..." name="message" required></textarea>
-          <button type="submit" class="btn-send"> Let's Connect</button>
+          <input class="inputstyle" placeholder="Enter Subject..." name="subject" required />
+          <textarea class="inputstyle" placeholder="Enter Comment..." name="message" required></textarea>
+          <button type="submit" class="btn-send"> Let's Connect </button>
           <p id="formStatus"></p>
         </form>
       </div>
