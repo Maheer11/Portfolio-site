@@ -1,339 +1,701 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My portfolio</title>
+  <meta name="description" content="Maheer - Front End Developer Portfolio. Passionate developer with 4+ years experience in React, JavaScript, and modern web technologies." />
+  <meta name="keywords" content="Maheer, Front End Developer, React, JavaScript, Web Developer, Portfolio" />
+  <meta name="author" content="Maheer" />
+  <title>Maheer | Front End Developer Portfolio</title>
+  
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="portfolio.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
-
-  <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <!-- Or, use a Kit code:
-  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
-  -->
-  </head>
+</head>
 
 <body class="lightmode">
-  <nav>
-    <div class="nav-container">
-      <div class="logo">Maheer</div>
-      <button class="mode-btn" id="toggleButton">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="mode-btn-style" width="2rem">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-        </svg>
-      </button>
-    </div>
-    <div class="nav-both">
-      <div class="not"></div>
-      <div class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="nav-links" id="navlinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#SkillSet">SkillSet</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <!---PROFILE SECTION-->
-  <section id="profile">
-    <div class="profile-con">
-      <div>
-        <img src="./images/profile.jpg" alt="Maheer's profile picture" class="profile-pic" />
-      </div>
-
-      <div class="section_text">
-        <p class="section_text_p1">Hello, I'm</p>
-        <h1 class="title">Maheer.</h1>
-        <p class="section_text_p2">Front End Developer</p>
-
-        <div>
-          <button class="btn" onclick="window.open('ABDUL GAFAR MAHMUD CV.pdf')">
-            Resume
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="#" class="logo" aria-label="Maheer's Portfolio">Maheer</a>
+        </div>
+        
+        <div class="nav-controls">
+          <button class="theme-toggle" id="toggleButton" aria-label="Toggle dark mode">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              class="theme-icon">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+            </svg>
           </button>
-
-          <button class="btn" onclick="location.href='#Contact'">
-            Contact Me
+          
+          <button class="mobile-menu-toggle" id="hamburger" aria-label="Toggle mobile menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
           </button>
         </div>
-
-        <!-- ✅ Fixed: social block should not contain img/src in the div tag --->
-        <div id="social">
-          <img src="./images/linkedin.png" alt="LinkedIn Profile" class="icon"
-            onclick="location.href='https://www.linkedin.com/in/abdul-gafarmahmud/'" />
-          <img src="./images/github.png" alt="GitHub Profile" class="icon"
-            onclick="location.href='https://github.com/Maheer11/'" />
-          <img src="./images/twitter.png" alt="Twitter Profile" class="icon"
-            onclick="location.href='https://x.com/_mahirr'" />
-        </div>
       </div>
-    </div>
-  </section>
-  <!---ABOUT SECTION-->
-  <section class="about-section" id="about">
-    <h1 class="about-title">About Me</h1>
-    <p class="subtext">Get to Know More</p>
-
-    <div class="about-content">
-      <!-- Column 1: Image -->
-      <div class="about-image-wrapper">
-        <img src="images/about.jpg" class="about-image" />
-      </div>
-
-      <!-- Column 2: Description -->
-      <div class="about-description">
-        <p class="aboutText">
-          I am a passionate Front End Developer with over 4 years of hands-on experience
-          building dynamic and responsive web applications. I specialize in both frontend
-          and backend technologies, including React, HTML, CSS, Tailwind, and JavaScript.
-          <span id="moreText" class="collapsed">
-            I place a strong emphasis on building seamless user experiences using React’s component-based architecture.
-            I enjoy
-            designing reusable, scalable UI components that ensure consistency across an application. By leveraging
-            state
-            management, hooks, and responsive design techniques, I strive to create fluid, intuitive interfaces that
-            perform well
-            across devices and screen sizes. My goal is to bridge design and functionality, ensuring that every
-            interaction feels
-            natural, fast, and user-focused.
-          </span>
-        </p>
-        <button id="readMoreBtn">Read More </button>
-      </div>
-      <div class="edex1">
-        <div>
-          <h1 class="edex-header">
-            Career Highlights
-          </h1>
-        </div>
-        <ul class="edexul">
-          <li class="edexParent">
-            Education
-            <ul class="edexChild">
-              <li>Bsc. Computer Science</li>
-              <li> Certified JavaScript Developer </li>
-              <li>Certified Udemy Web Dev.</li>
-            </ul>
-          </li>
-
-          <li class="edexParent">
-            Experience
-            <ul class="edexChild">
-              <li>4 Years Frontend Development</li>
-            </ul>
-          </li>
-        </ul>
-
-      </div>
-
-    </div>
-
-
-  </section>
-
-
-  <!----SKILLSET SECTION-->
-  <section class="experience-section" id="SkillSet">
-    <!--<p class="experience-section"> Explore My</p> -->
-    <h3 class="section-header">SkillSet</h3>
-    <div class="exp-box">
-      <div class="setexp">
-        <h4 class="box-heading">FrontEnd Development</h4>
-        <ul>
-          <li>
-            <img src="images/check-mark.png" alt="" /><span>HTML
-              <span id="span"> - Expert</span>
-            </span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" /><span>CSS
-              <span id="span"> - Expert</span>
-            </span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" /><span>Javascript
-              <span id="span"> - Intermediate</span>
-            </span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" /><span>React
-              <span id="span"> - Intermediate</span>
-            </span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" /><span>Vite + React
-              <span id="span"> - Intermediate</span>
-            </span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" /><span>WordPress <span id="span"> - Expert</span>
-            </span>
-          </li>
-        </ul>
-      </div>
-      <div class="setexp">
-        <h4 class="box-heading">BackEnd Development</h4>
-        <ul>
-          <li>
-            <img src="images/check-mark.png" alt="" />Node js
-            <span id="span"> - Intermediate</span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" />Mongo Db
-            <span id="span"> - Intermediate</span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" />Mysql
-            <span id="span"> - Intermediate</span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" />REST
-            <span id="span"> - Intermediate</span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" />Redis
-            <span id="span"> - Intermediate</span>
-          </li>
-          <li>
-            <img src="images/check-mark.png" alt="" />Postman
-            <span id="span"> - Intermediate</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <!-- PROJECT SECTION -->
-  <section class="project-section" id="Projects">
-    <div class="project-head">
-      <p>Browse my Recent Projects</p>
-      <h1>Projects</h1>
-    </div>
-    <div id="filter-buttons">
-      <button data-filter="all">All</button>
-      <button data-filter="React">React</button>
-      <button data-filter="Node.js">Node.js</button>
-      <button data-filter="WordPress">WordPress</button>
-    </div>
-    <div class="pro-container">
-      <ul class="procard">
-        <!-- Project 1 -->
-        <li class="procards" data-tech="React">
-          <h3>A Blog Website</h3>
-          <div class="card-image">
-            <div class="card-body">
-              <img src="images/Project 1.png" alt="React Blog" />
-              <div class="probtn">
-                <a href="https://maheer11.github.io/maheers-blog/" class="btn btn-color-2">Live Demo</a>
-                <a class="btn btn-color-2" href="https://github.com/Maheer11/maheers-blog">GitHub</a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- Project 2 -->
-        <li class="procards" data-tech="React, Node.js">
-          <h3>Food Delivery Web App</h3>
-          <div class="card-image">
-            <div class="card-body">
-              <img src="images/Project 2.png" alt="Food Delivery App" />
-              <div class="probtn">
-                <a href="https://foodelivo.netlify.app/ " class="btn btn-color-2">Live Demo</a>
-                <a href="" class="btn btn-color-2">GitHub</a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- Project 3 -->
-        <li class="procards" data-tech="WordPress">
-          <h3>Construction Company Website</h3>
-          <div class="card-image">
-            <div class="card-body">
-              <img src="images/Project 3.png" alt="Construction Website" />
-              <div class="probtn">
-                <a class="btn btn-color-2" href="nalot.com.ng">Live Demo</a>
-                <a class="btn btn-color-2">GitHub</a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="procards" data-tech="React">
-          <h3>Portfolio</h3>
-          <div class="card-image">
-            <div class="card-body">
-              <img src="images/Portfolio.png" alt="Maheers-Portfolio" />
-              <div class="probtn">
-                <a class="btn btn-color-2" href="https://maheer11.github.io/Portfolio-site/">Live Demo</a>
-                <a class="btn btn-color-2">GitHub</a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="procards" data-tech="Vite, React">
-          <h3>Password Validation</h3>
-          <div class="card-image">
-            <div class="card-body">
-              <img src="images/validation.png" alt="Password Validation" />
-              <div class="probtn">
-                <a class="btn btn-color-2" href="https://maheer11.github.io/User-Form-Password-Validation/">Live
-                  Demo</a>
-                <a class="btn btn-color-2">GitHub</a>
-              </div>
-            </div>
-          </div>
-        </li>
+      
+      <ul class="nav-menu" id="navlinks" role="menubar">
+        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
       </ul>
-    </div>
-  </section>
-  <section id="Contact" class="contact-area">
-    <h1>Contact us</h1>
-    <p class="contact-p">Got a project idea? Let's Talk</p>
-    <div class="contact-container">
-      <!-- Contact Form -->
-      <div class="contactus">
-        <h3>Get in Touch</h3>
-        <form id="contactForm" action="https://formspree.io/f/xanbojok" method="POST">
-          <div class="input-group">
-            <input class="inputstyle" type="text" placeholder="Enter Name..." name="name" required />
-            <input class="inputstyle" type="email" placeholder="Enter Email..." name="email" required />
+    </nav>
+  </header>
+  <!-- HERO SECTION -->
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-image">
+            <div class="image-wrapper">
+              <img src="./images/profile.jpg" alt="Maheer - Front End Developer" class="profile-image" />
+              <div class="image-backdrop"></div>
+            </div>
           </div>
-          <input class="inputstyle" placeholder="Enter Subject..." name="subject" required />
-          <textarea class="inputstyle" placeholder="Enter Comment..." name="message" required></textarea>
-          <button type="submit" class="btn-send"> Let's Connect </button>
-          <p id="formStatus"></p>
-        </form>
-      </div>
 
-      <div class="contact-info">
-        <p>
-          <strong>E-Mail :</strong><br />mahhir09@gmail.com<br />gflamezy@gmail.com
-        </p>
-        <p>
-          <strong>Address :</strong><br />Suite D11 gimbiya Street<br />Garki
-          Abuja
-        </p>
-        <p><strong>Phone :</strong><br />+2348037646510<br /></p>
-        <div class="social-icons">
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.linkedin.com/in/abdul-gafarmahmud/'"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.instagram.com/_mahhir?igsh=MWgwN3ZscnYxcmxmOQ%3D%3D&utm_source=qr"><i
-              class="fab fa-instagram"></i></a>
+          <div class="hero-text">
+            <div class="hero-intro">
+              <span class="greeting">Hello, I'm</span>
+              <h1 class="hero-title">
+                <span class="name-highlight">Maheer</span>
+                <span class="title-decoration">.</span>
+              </h1>
+              <h2 class="hero-subtitle">Front End Developer</h2>
+              <p class="hero-description">
+                Crafting exceptional digital experiences with modern web technologies. 
+                Passionate about creating responsive, user-friendly applications that make a difference.
+              </p>
+            </div>
+
+            <div class="hero-actions">
+              <a href="ABDUL GAFAR MAHMUD CV.pdf" target="_blank" class="btn btn-primary" download>
+                <i class="fas fa-download"></i>
+                Download Resume
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Get In Touch
+              </a>
+            </div>
+
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/abdul-gafarmahmud/" target="_blank" rel="noopener noreferrer" 
+                 class="social-link" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Maheer11/" target="_blank" rel="noopener noreferrer" 
+                 class="social-link" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://x.com/_mahirr" target="_blank" rel="noopener noreferrer" 
+                 class="social-link" aria-label="Twitter Profile">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="scroll-indicator">
+          <a href="#about" class="scroll-down" aria-label="Scroll to about section">
+            <i class="fas fa-chevron-down"></i>
+          </a>
         </div>
       </div>
+    </section>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Get to know me</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Image & Quick Stats -->
+          <div class="about-visual">
+            <div class="about-image-container">
+              <img src="images/about.jpg" alt="Maheer working on projects" class="about-image" />
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <span class="experience-badge">4+ Years</span>
+                  <p>Experience</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">4+</div>
+                <div class="stat-label">Years Exp.</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Technologies</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Description & Details -->
+          <div class="about-content">
+            <div class="about-text">
+              <h3 class="about-subtitle">Passionate Developer & Problem Solver</h3>
+              <p class="about-description">
+                I'm a passionate Front End Developer with over 4 years of hands-on experience 
+                building dynamic and responsive web applications. I specialize in modern frontend 
+                technologies including React, TypeScript, and cutting-edge CSS frameworks.
+              </p>
+              
+              <div class="expandable-content">
+                <div id="moreText" class="expanded-text collapsed">
+                  <p>
+                    I place a strong emphasis on building seamless user experiences using React's 
+                    component-based architecture. I enjoy designing reusable, scalable UI components 
+                    that ensure consistency across applications.
+                  </p>
+                  <p>
+                    By leveraging state management, hooks, and responsive design techniques, I strive 
+                    to create fluid, intuitive interfaces that perform exceptionally across all devices 
+                    and screen sizes. My goal is to bridge design and functionality.
+                  </p>
+                </div>
+                <button id="readMoreBtn" class="read-more-btn">
+                  <span class="btn-text">Read More</span>
+                  <i class="fas fa-chevron-down btn-icon"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Education & Experience Cards -->
+            <div class="credentials-section">
+              <div class="credential-card">
+                <div class="card-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="card-content">
+                  <h4 class="card-title">Education</h4>
+                  <ul class="credential-list">
+                    <li>BSc. Computer Science</li>
+                    <li>Certified JavaScript Developer</li>
+                    <li>Certified Web Developer (Udemy)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="credential-card">
+                <div class="card-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="card-content">
+                  <h4 class="card-title">Experience</h4>
+                  <ul class="credential-list">
+                    <li>4+ Years Frontend Development</li>
+                    <li>React & Modern JavaScript</li>
+                    <li>Full-Stack Web Applications</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I can do</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Frontend Skills -->
+          <div class="skill-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="category-title">Frontend Development</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fab fa-html5 skill-icon"></i>
+                  <span class="skill-name">HTML5</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Expert</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="95"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fab fa-css3-alt skill-icon"></i>
+                  <span class="skill-name">CSS3 & Sass</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Expert</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="90"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fab fa-js-square skill-icon"></i>
+                  <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Advanced</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="85"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fab fa-react skill-icon"></i>
+                  <span class="skill-name">React</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Advanced</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="80"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fas fa-bolt skill-icon"></i>
+                  <span class="skill-name">Vite + React</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Advanced</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="75"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fab fa-wordpress skill-icon"></i>
+                  <span class="skill-name">WordPress</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Expert</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="92"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="skill-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3 class="category-title">Backend Development</h3>
+            </div>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fab fa-node-js skill-icon"></i>
+                  <span class="skill-name">Node.js</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Intermediate</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="70"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fas fa-leaf skill-icon"></i>
+                  <span class="skill-name">MongoDB</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Intermediate</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="65"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fas fa-database skill-icon"></i>
+                  <span class="skill-name">MySQL</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Intermediate</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="68"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fas fa-exchange-alt skill-icon"></i>
+                  <span class="skill-name">REST APIs</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Intermediate</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="72"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fas fa-memory skill-icon"></i>
+                  <span class="skill-name">Redis</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Intermediate</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="60"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <i class="fas fa-paper-plane skill-icon"></i>
+                  <span class="skill-name">Postman</span>
+                </div>
+                <div class="skill-level">
+                  <span class="level-text">Intermediate</span>
+                  <div class="level-bar">
+                    <div class="level-progress" data-level="75"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">My Work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Here are some of my recent projects that showcase my skills and experience
+            in modern web development.
+          </p>
+        </div>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="react">React</button>
+          <button class="filter-btn" data-filter="node.js">Node.js</button>
+          <button class="filter-btn" data-filter="wordpress">WordPress</button>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-category="react">
+            <div class="project-image">
+              <img src="images/Project 1.png" alt="React Blog Website" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">CSS3</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Modern Blog Website</h3>
+              <p class="project-description">
+                A responsive blog platform built with React, featuring dynamic content rendering, 
+                modern UI/UX design, and optimized performance.
+              </p>
+              <div class="project-actions">
+                <a href="https://maheer11.github.io/maheers-blog/" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline">
+                  <i class="fas fa-external-link-alt"></i>
+                  Live Demo
+                </a>
+                <a href="https://github.com/Maheer11/maheers-blog" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline">
+                  <i class="fab fa-github"></i>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="react node.js">
+            <div class="project-image">
+              <img src="images/Project 2.png" alt="Food Delivery Web Application" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Food Delivery App</h3>
+              <p class="project-description">
+                Full-stack food delivery application with user authentication, real-time ordering, 
+                payment integration, and responsive design.
+              </p>
+              <div class="project-actions">
+                <a href="https://foodelivo.netlify.app/" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline">
+                  <i class="fas fa-external-link-alt"></i>
+                  Live Demo
+                </a>
+                <a href="#" class="btn btn-outline disabled">
+                  <i class="fab fa-github"></i>
+                  Private Repo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="wordpress">
+            <div class="project-image">
+              <img src="images/Project 3.png" alt="Construction Company Website" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-tech">
+                  <span class="tech-tag">WordPress</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">Custom Theme</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Construction Company Site</h3>
+              <p class="project-description">
+                Professional WordPress website for a construction company with custom theme development, 
+                SEO optimization, and content management system.
+              </p>
+              <div class="project-actions">
+                <a href="https://nalot.com.ng" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline">
+                  <i class="fas fa-external-link-alt"></i>
+                  Live Demo
+                </a>
+                <a href="#" class="btn btn-outline disabled">
+                  <i class="fab fa-github"></i>
+                  Client Project
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="react">
+            <div class="project-image">
+              <img src="images/Portfolio.png" alt="Personal Portfolio Website" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-tech">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Portfolio Website</h3>
+              <p class="project-description">
+                Responsive portfolio website showcasing projects and skills with modern design, 
+                smooth animations, and optimized performance.
+              </p>
+              <div class="project-actions">
+                <a href="https://maheer11.github.io/Portfolio-site/" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline">
+                  <i class="fas fa-external-link-alt"></i>
+                  Live Demo
+                </a>
+                <a href="#" class="btn btn-outline disabled">
+                  <i class="fab fa-github"></i>
+                  View Code
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" data-category="react">
+            <div class="project-image">
+              <img src="images/validation.png" alt="Password Validation System" loading="lazy" />
+              <div class="project-overlay">
+                <div class="project-tech">
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Password Validation System</h3>
+              <p class="project-description">
+                Interactive password validation system with real-time feedback, strength indicators, 
+                and modern React development practices.
+              </p>
+              <div class="project-actions">
+                <a href="https://maheer11.github.io/User-Form-Password-Validation/" target="_blank" rel="noopener noreferrer" 
+                   class="btn btn-outline">
+                  <i class="fas fa-external-link-alt"></i>
+                  Live Demo
+                </a>
+                <a href="#" class="btn btn-outline disabled">
+                  <i class="fab fa-github"></i>
+                  View Code
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Let's work together</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
+          <p class="section-description">
+            Have a project idea or want to collaborate? I'd love to hear from you.
+            Let's create something amazing together!
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <form id="contactForm" class="contact-form" action="https://formspree.io/f/xanbojok" method="POST">
+              <div class="form-group">
+                <div class="input-wrapper">
+                  <i class="fas fa-user input-icon"></i>
+                  <input type="text" name="name" placeholder="Your Name" required class="form-input" />
+                </div>
+                <div class="input-wrapper">
+                  <i class="fas fa-envelope input-icon"></i>
+                  <input type="email" name="email" placeholder="Your Email" required class="form-input" />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <i class="fas fa-tag input-icon"></i>
+                <input type="text" name="subject" placeholder="Subject" required class="form-input" />
+              </div>
+              <div class="input-wrapper">
+                <i class="fas fa-comment input-icon"></i>
+                <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
+              </div>
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+              <div id="formStatus" class="form-status"></div>
+            </form>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p><a href="mailto:mahhir09@gmail.com">mahhir09@gmail.com</a></p>
+                <p><a href="mailto:gflamezy@gmail.com">gflamezy@gmail.com</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Suite D11 Gimbiya Street<br>Garki, Abuja<br>Nigeria</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p><a href="tel:+2348037646510">+234 803 764 6510</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-socials">
+              <h4>Follow Me</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/abdul-gafarmahmud/" target="_blank" rel="noopener noreferrer" 
+                   class="social-link" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Maheer11/" target="_blank" rel="noopener noreferrer" 
+                   class="social-link" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/_mahirr" target="_blank" rel="noopener noreferrer" 
+                   class="social-link" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/_mahhir" target="_blank" rel="noopener noreferrer" 
+                   class="social-link" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Maheer. All rights reserved. Built with passion and modern web technologies.</p>
+      </div>
     </div>
-  </section>
+  </footer>
 
   <script src="portfolio.js"></script>
 </body>
-</head>
-
 </html>

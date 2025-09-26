@@ -1,0 +1,440 @@
+@media screen and (max-width: 1100px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+  .not {
+    display: none;
+  }
+
+  .profile-con {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .info-boxes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .exp-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card-body h3 {
+    font-size: 0.7rem;
+    color: #333;
+    margin-bottom: 0.7rem;
+  }
+
+  .procard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .procard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .procards {
+    justify-content: center;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* TABLET VIEW */
+@media screen and (max-width: 768px) {
+  /* Stack nav links vertically and show hamburger */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 150px;
+    z-index: 1000;
+    text-align: center;
+    transition: 0.1s ease, padding 0.5s ease;
+    width: 100%;
+    left: -100;
+    padding: 4rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+    left: 0;
+  }
+  .nav-container {
+    max-width: 100%;
+  }
+  .nav-both {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .not {
+    display: block;
+  }
+
+  .darkmode .nav-links {
+    display: none;
+  }
+  .darkmode .hamburger {
+    display: block;
+    color: white;
+  }
+  .darkmode .nav-links.active {
+    display: flex;
+    left: 0;
+  }
+
+  .darkmode {
+    bottom: 5rem;
+  }
+
+  .darkmode .nav-links li a:hover {
+    color: #3a082b;
+    background-color: white;
+  }
+  /* Profile section image smaller */
+  .profile-pic {
+    width: 300px;
+    height: 300px;
+  }
+
+  #profile {
+    max-width: 100%;
+  }
+
+  .profile-con {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+
+  /* About section layout */
+  .about-content {
+    flex-direction: column;
+  }
+
+  .info-boxes {
+    flex-direction: column;
+  }
+
+  /* SkillSet boxes stack */
+  .exp-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Project cards stack */
+  .procard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hamburger {
+    display: block;
+    text-align: right;
+    z-index: 1002;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .scroll-arrow {
+    display: none;
+  }
+  .nav-links li a {
+    margin: 1rem;
+  }
+  .darkmode .nav-links {
+    background-color: #3a082b;
+  }
+
+  .nav-links li a:hover {
+    color: #efecee;
+    background-color: rgb(57, 3, 31);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+
+  .nav-both {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  body {
+    max-width: 100%;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    max-width: 100%;
+    justify-items: flex-end;
+  }
+
+  .not {
+    width: 100%;
+  }
+
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .profile-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-content {
+    grid-template-columns: (1, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .about-image-wrapper,
+  .about-description,
+  .column-wrapper {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .column-wrapper {
+    gap: 1rem;
+  }
+
+  .catabout img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 12px;
+  }
+  #readMoreBtn {
+    border: 2px solid rgb(220, 205, 234);
+    width: 45%;
+    padding: 1rem 2rem;
+    background-color: #0066cc;
+    color: white;
+    font-weight: 300;
+  }
+
+  #moreText {
+    font-size: 15;
+  }
+
+  .typing {
+    font-size: 17;
+  }
+  .havard {
+    padding: 1rem 2rem;
+  }
+
+  .info-cards {
+    font-size: 0.9rem;
+  }
+  .procard {
+    grid-template-columns: repeat(1, 1fr); /* or just 1fr */
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .project-head {
+    grid-column: 2/-1;
+  }
+
+  .card-body {
+    color: #3a082b;
+  }
+
+  section {
+    margin-top: 1rem;
+  }
+  section:first-child {
+    margin-top: 0;
+  }
+
+  #Contact {
+    width: 100%;
+  }
+}
+
+/* --------------------
+   📱 MOBILE VIEW
+   Max-width: 390px
+-------------------- */
+
+@media screen and (max-width: 390px) {
+  body {
+    max-width: 100%;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    max-width: 100%;
+    justify-items: flex-end;
+  }
+
+  .not {
+    width: 100%;
+  }
+
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .profile-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-content {
+    grid-template-columns: (1, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .about-image-wrapper,
+  .about-description,
+  .column-wrapper {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .column-wrapper {
+    gap: 1rem;
+  }
+
+  .catabout img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 12px;
+  }
+  #readMoreBtn {
+    border: 2px solid rgb(220, 205, 234);
+    width: 45%;
+    padding: 1rem 2rem;
+    background-color: #0066cc;
+    color: white;
+    font-weight: 300;
+  }
+
+  #moreText {
+    font-size: 15;
+  }
+
+  .typing {
+    font-size: 17;
+  }
+  .havard {
+    padding: 1rem 2rem;
+  }
+
+  .info-cards {
+    font-size: 0.9rem;
+  }
+  .procard {
+    grid-template-columns: repeat(1, 1fr); /* or just 1fr */
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .project-head {
+    grid-column: 2/-1;
+  }
+
+  .card-body {
+    color: #3a082b;
+  }
+
+  section {
+    margin-top: 1rem;
+  }
+  section:first-child {
+    margin-top: 0;
+  }
+
+  #Contact {
+    width: 100%;
+  }
+}
