@@ -3,5 +3,6 @@
     "editor.tabSize": 2,
     "editor.fontSize": 16,
     "files.autoSave": "onFocusChange",
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "liveServer.settings.port": 5501
 }
