@@ -11,8 +11,6 @@ const elements = {
   navLinks: document.getElementById("navlinks"),
   themeToggle: document.getElementById("toggleButton"),
   body: document.body,
-  readMoreBtn: document.getElementById("readMoreBtn"),
-  moreText: document.getElementById("moreText"),
   contactForm: document.getElementById("contactForm"),
   formStatus: document.getElementById("formStatus"),
   filterButtons: document.querySelectorAll(".filter-btn"),
@@ -276,48 +274,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /*===============================================
-  READ MORE FUNCTIONALITY
+  READ MORE FUNCTIONALITY - REMOVED
+  Content now displays in full for better UX
 ===============================================*/
-class ReadMoreManager {
-  constructor() {
-    this.init();
-  }
-
-  init() {
-    this.bindEvents();
-    this.setupInitialState();
-  }
-
-  bindEvents() {
-    elements.readMoreBtn?.addEventListener('click', this.toggleReadMore.bind(this));
-  }
-
-  setupInitialState() {
-    if (elements.moreText) {
-      elements.moreText.classList.add('collapsed');
-    }
-  }
-
-  toggleReadMore() {
-    if (!elements.moreText || !elements.readMoreBtn) return;
-    
-    const isCollapsed = elements.moreText.classList.contains('collapsed');
-    const btnText = elements.readMoreBtn.querySelector('.btn-text');
-    const btnIcon = elements.readMoreBtn.querySelector('.btn-icon');
-    
-    if (isCollapsed) {
-      elements.moreText.classList.remove('collapsed');
-      elements.moreText.classList.add('expanded');
-      if (btnText) btnText.textContent = 'Read Less';
-      if (btnIcon) btnIcon.style.transform = 'rotate(180deg)';
-    } else {
-      elements.moreText.classList.remove('expanded');
-      elements.moreText.classList.add('collapsed');
-      if (btnText) btnText.textContent = 'Read More';
-      if (btnIcon) btnIcon.style.transform = 'rotate(0deg)';
-    }
-  }
-}
 
 /*===============================================
   CONTACT FORM MANAGER
