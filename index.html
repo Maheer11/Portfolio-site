@@ -186,36 +186,86 @@
 
 
           </div>
-          <!-- Education & Experience Cards -->
+          <!-- Education & Experience Cards - Enhanced -->
           <div class="credentials-section">
-            <div class="credential-card">
-              <div class="card-icon">
-                <i class="fas fa-graduation-cap i"></i>
+            <!-- Education Card -->
+            <div class="credential-card education-card">
+              <div class="card-header">
+                <div class="card-icon-wrapper">
+                  <div class="icon-bg-glow"></div>
+                  <i class="fas fa-graduation-cap card-icon"></i>
+                </div>
+                <div class="card-header-text">
+                  <h4 class="card-title">Education</h4>
+                  <span class="card-subtitle">Academic & Certifications</span>
+                </div>
               </div>
-              <div class="card-content">
-                <h4 class="card-title">Education</h4>
-                <ul class="credential-list">
-                  <li>BSc. Computer Science</li>
-                  <li> Professional Certificate in HTML & CSS – NIIT </li>
-                  <li> Full React Js Course Redux, Hooks & Context - Udemy</li>
-                  <li>Certified Typescript Developer - Udemy</li>
-                  
-                </ul>
+              <div class="card-body">
+                <div class="credential-item">
+                  <div class="credential-dot"></div>
+                  <div class="credential-content">
+                    <h5 class="credential-title">BSc. Computer Science</h5>
+                    <p class="credential-meta">Bachelor's Degree</p>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-dot"></div>
+                  <div class="credential-content">
+                    <h5 class="credential-title">Professional Certificate in HTML & CSS</h5>
+                    <p class="credential-meta">NIIT</p>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-dot"></div>
+                  <div class="credential-content">
+                    <h5 class="credential-title">Full React Js Course</h5>
+                    <p class="credential-meta">Redux, Hooks & Context - Udemy</p>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-dot"></div>
+                  <div class="credential-content">
+                    <h5 class="credential-title">Certified TypeScript Developer</h5>
+                    <p class="credential-meta">Udemy</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="credential-card">
-              <div class="card-icon">
-                <i class="fas fa-briefcase i"></i>
+            <!-- Experience Card -->
+            <div class="credential-card experience-card">
+              <div class="card-header">
+                <div class="card-icon-wrapper">
+                  <div class="icon-bg-glow"></div>
+                  <i class="fas fa-briefcase card-icon"></i>
+                </div>
+                <div class="card-header-text">
+                  <h4 class="card-title">Experience</h4>
+                  <span class="card-subtitle">Professional Journey</span>
+                </div>
               </div>
-              <div class="card-content">
-                <h4 class="card-title">Experience</h4>
-                <ul class="credential-list">
-                  <li>2+ Years Frontend Development</li>
-                  <li>React & Modern JavaScript</li>
-                  <li>Experienced Front end Engineer, solving real-world web challenges through clean architecture, TypeSafety, and
-                  modern React practices</li>
-                </ul>
+              <div class="card-body">
+                <div class="credential-item">
+                  <div class="credential-dot"></div>
+                  <div class="credential-content">
+                    <h5 class="credential-title">Frontend Development</h5>
+                    <p class="credential-meta">2+ Years of Experience</p>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-dot"></div>
+                  <div class="credential-content">
+                    <h5 class="credential-title">React & Modern JavaScript</h5>
+                    <p class="credential-meta">Component-based Architecture</p>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-dot"></div>
+                  <div class="credential-content">
+                    <h5 class="credential-title">Front-end Engineer</h5>
+                    <p class="credential-meta">Clean architecture, type safety & modern React practices</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -425,160 +475,200 @@
         <div class="projects-grid">
           <!-- Project 1 -->
           <article class="project-card" data-category="react">
-            <div class="project-image">
-              <img src="images/Project 1.png" alt="React Blog Website" loading="lazy" />
+            <div class="project-image-wrapper">
+              <img src="images/Project 1.png" alt="React Blog Website" loading="lazy" class="project-image" />
               <div class="project-overlay">
-                <div class="project-tech">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">CSS3</span>
+                <div class="overlay-content-wrapper">
+                  <div class="project-tech-tags">
+                    <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                    <span class="tech-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                    <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Modern Blog Website</h3>
+              <div class="project-header">
+                <h3 class="project-title">Modern Blog Website</h3>
+                <div class="project-status">
+                  <span class="status-badge active">Live</span>
+                </div>
+              </div>
               <p class="project-description">
-                Handling routing system in react with a blog sample for users to input blog content, blog author and
-                submit for publication.
+                A dynamic React blog with routing system, enabling users to input content, author details, and publish posts seamlessly.
               </p>
-              <div class="project-actions">
-                <a href="https://maheer11.github.io/maheers-blog/" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-outline">
-                  <i class="fas fa-external-link-alt"></i>
-                  Live Demo
-                </a>
-                <a href="https://github.com/Maheer11/maheers-blog" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-outline">
-                  <i class="fab fa-github"></i>
-                  Source Code
-                </a>
+              <div class="project-footer">
+                <div class="project-actions">
+                  <a href="https://maheer11.github.io/maheers-blog/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-project-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Live Demo
+                  </a>
+                  <a href="https://github.com/Maheer11/maheers-blog" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-project-secondary">
+                    <i class="fab fa-github"></i>
+                    Code
+                  </a>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Project 2 -->
           <article class="project-card" data-category="react node.js">
-            <div class="project-image">
-              <img src="images/Project 2.png" alt="Food Delivery Web Application" loading="lazy" />
+            <div class="project-image-wrapper">
+              <img src="images/Project 2.png" alt="Food Delivery Web Application" loading="lazy" class="project-image" />
               <div class="project-overlay">
-                <div class="project-tech">
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">MongoDB</span>
+                <div class="overlay-content-wrapper">
+                  <div class="project-tech-tags">
+                    <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                    <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="tech-tag"><i class="fas fa-database"></i> MongoDB</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Food Delivery App</h3>
+              <div class="project-header">
+                <h3 class="project-title">Food Delivery App</h3>
+                <div class="project-status">
+                  <span class="status-badge active">Live</span>
+                </div>
+              </div>
               <p class="project-description">
-                Full-stack food delivery application with user authentication, real-time ordering,
-                payment integration, and responsive design.
+                Full-stack food delivery platform with user authentication, real-time ordering, payment integration, and responsive design.
               </p>
-              <div class="project-actions">
-                <a href="https://foodelivo.netlify.app/" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-outline">
-                  <i class="fas fa-external-link-alt"></i>
-                  Live Demo
-                </a>
-                <a href="#" class="btn btn-outline disabled">
-                  <i class="fab fa-github"></i>
-                  Private Repo
-                </a>
+              <div class="project-footer">
+                <div class="project-actions">
+                  <a href="https://foodelivo.netlify.app/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-project-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Live Demo
+                  </a>
+                  <a href="#" class="btn btn-project-secondary disabled">
+                    <i class="fas fa-lock"></i>
+                    Private
+                  </a>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Project 3 -->
           <article class="project-card" data-category="wordpress">
-            <div class="project-image">
-              <img src="images/Project 3.png" alt="Construction Company Website" loading="lazy" />
+            <div class="project-image-wrapper">
+              <img src="images/Project 3.png" alt="Construction Company Website" loading="lazy" class="project-image" />
               <div class="project-overlay">
-                <div class="project-tech">
-                  <span class="tech-tag">WordPress</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">Custom Theme</span>
+                <div class="overlay-content-wrapper">
+                  <div class="project-tech-tags">
+                    <span class="tech-tag"><i class="fab fa-wordpress"></i> WordPress</span>
+                    <span class="tech-tag"><i class="fab fa-php"></i> PHP</span>
+                    <span class="tech-tag"><i class="fas fa-palette"></i> Custom Theme</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Construction Company Site</h3>
+              <div class="project-header">
+                <h3 class="project-title">Construction Company Site</h3>
+                <div class="project-status">
+                  <span class="status-badge client">Client</span>
+                </div>
+              </div>
               <p class="project-description">
-                Professional WordPress website for a construction company with custom theme development,
-                SEO optimization, and content management system.
+                Professional WordPress website with custom theme development, SEO optimization, and comprehensive content management system.
               </p>
-              <div class="project-actions">
-                <a href="https://nalot.com.ng" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                  <i class="fas fa-external-link-alt"></i>
-                  Live Demo
-                </a>
-                <a href="#" class="btn btn-outline disabled">
-                  <i class="fab fa-github"></i>
-                  Client Project
-                </a>
+              <div class="project-footer">
+                <div class="project-actions">
+                  <a href="https://nalot.com.ng" target="_blank" rel="noopener noreferrer" class="btn btn-project-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Live Demo
+                  </a>
+                  <a href="#" class="btn btn-project-secondary disabled">
+                    <i class="fas fa-briefcase"></i>
+                    Client
+                  </a>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Project 4 -->
           <article class="project-card" data-category="react">
-            <div class="project-image">
-              <img src="images/Portfolio.png" alt="Personal Portfolio Website" loading="lazy" />
+            <div class="project-image-wrapper">
+              <img src="images/Portfolio.png" alt="Personal Portfolio Website" loading="lazy" class="project-image" />
               <div class="project-overlay">
-                <div class="project-tech">
-                  <span class="tech-tag">HTML5</span>
-                  <span class="tech-tag">CSS3</span>
-                  <span class="tech-tag">JavaScript</span>
+                <div class="overlay-content-wrapper">
+                  <div class="project-tech-tags">
+                    <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="tech-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Portfolio Website</h3>
+              <div class="project-header">
+                <h3 class="project-title">Portfolio Website</h3>
+                <div class="project-status">
+                  <span class="status-badge active">Live</span>
+                </div>
+              </div>
               <p class="project-description">
-                Responsive portfolio website showcasing projects and skills with modern design,
-                smooth animations, and optimized performance.
+                Responsive portfolio showcasing projects and skills with modern design, smooth animations, and optimized performance.
               </p>
-              <div class="project-actions">
-                <a href="https://maheer11.github.io/Portfolio-site/" target="_blank" rel="noopener noreferrer"
-                  class="btn btn-outline">
-                  <i class="fas fa-external-link-alt"></i>
-                  Live Demo
-                </a>
-                <a href="#" class="btn btn-outline disabled">
-                  <i class="fab fa-github"></i>
-                  View Code
-                </a>
+              <div class="project-footer">
+                <div class="project-actions">
+                  <a href="https://maheer11.github.io/Portfolio-site/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-project-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Live Demo
+                  </a>
+                  <a href="#" class="btn btn-project-secondary disabled">
+                    <i class="fab fa-github"></i>
+                    Code
+                  </a>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Project 5 -->
           <article class="project-card" data-category="react">
-            <div class="project-image">
-              <img src="images/validation.png" alt="Password Validation System" loading="lazy" />
+            <div class="project-image-wrapper">
+              <img src="images/validation.png" alt="Password Validation System" loading="lazy" class="project-image" />
               <div class="project-overlay">
-                <div class="project-tech">
-                  <span class="tech-tag">Vite</span>
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">TypeScript</span>
+                <div class="overlay-content-wrapper">
+                  <div class="project-tech-tags">
+                    <span class="tech-tag"><i class="fas fa-bolt"></i> Vite</span>
+                    <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                    <span class="tech-tag"><i class="fab fa-js-square"></i> TypeScript</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Password Validation System</h3>
+              <div class="project-header">
+                <h3 class="project-title">Password Validation System</h3>
+                <div class="project-status">
+                  <span class="status-badge active">Live</span>
+                </div>
+              </div>
               <p class="project-description">
-                Interactive password validation system with real-time feedback, strength indicators,
-                and modern React development practices.
+                Interactive validation system with real-time feedback, strength indicators, and modern React development practices.
               </p>
-              <div class="project-actions">
-                <a href="https://maheer11.github.io/User-Form-Password-Validation/" target="_blank"
-                  rel="noopener noreferrer" class="btn btn-outline">
-                  <i class="fas fa-external-link-alt"></i>
-                  Live Demo
-                </a>
-                <a href="#" class="btn btn-outline disabled">
-                  <i class="fab fa-github"></i>
-                  View Code
-                </a>
+              <div class="project-footer">
+                <div class="project-actions">
+                  <a href="https://maheer11.github.io/User-Form-Password-Validation/" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-project-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Live Demo
+                  </a>
+                  <a href="#" class="btn btn-project-secondary disabled">
+                    <i class="fab fa-github"></i>
+                    Code
+                  </a>
+                </div>
               </div>
             </div>
           </article>
